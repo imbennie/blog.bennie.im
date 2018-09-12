@@ -1,0 +1,1136 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="uunYd41yLQ" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HtmlDom," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="YrlixJoe" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/avatar.png?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性. 我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.此文也算是作为本人个人的学习笔记, 与大家共勉.">
+<meta name="keywords" content="HtmlDom">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML DOM基本概念及Element.getAttribute(&quot;value&quot;) 与Attribute.value差异">
+<meta property="og:url" content="http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/index.html">
+<meta property="og:site_name" content="YrlixJoe">
+<meta property="og:description" content="今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性. 我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.此文也算是作为本人个人的学习笔记, 与大家共勉.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173818.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173820.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173821.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173822.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173823.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173824.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173825.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173826.png">
+<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173829.png">
+<meta property="og:updated_time" content="2018-06-05T13:18:09.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML DOM基本概念及Element.getAttribute(&quot;value&quot;) 与Attribute.value差异">
+<meta name="twitter:description" content="今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性. 我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.此文也算是作为本人个人的学习笔记, 与大家共勉.">
+<meta name="twitter:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/"/>
+
+
+
+
+
+  <title> HTML DOM基本概念及Element.getAttribute("value") 与Attribute.value差异 | YrlixJoe </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1273744894&web_id=1273744894" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YrlixJoe</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome, Here is YrlixJoe's Blog.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YrlixJoe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YrlixJoe">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML DOM基本概念及Element.getAttribute("value") 与Attribute.value差异
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-09T01:17:35+08:00">
+                2016-09-09
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-05T21:18:09+08:00">
+                2018-06-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i> View
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..<br>弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性.</p>
+<p>我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.<br>此文也算是作为本人个人的学习笔记, 与大家共勉.</p>
+<a id="more"></a>
+<h2 id="HTML-DOM是什么"><a href="#HTML-DOM是什么" class="headerlink" title="HTML DOM是什么?"></a>HTML DOM是什么?</h2><p>HTML DOM 的全称为: HTML Document Object Model, 意思是: 文档对象模型. 我们常说的DOM, 就是HTML DOM. DOM是对HTML文档里所有的一个统称, 一个规范.</p>
+<p>打开 w3c的网站 <a href="http://www.w3school.com.cn/htmldom/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/index.asp</a><br>这里对HTML DOM做出了解释.<br>第一句话就是: </p>
+<blockquote>
+</blockquote>
+<p>HTML DOM 定义了访问和操作 HTML 文档的标准方法。<br>DOM 将 HTML 文档表达为树结构。</p>
+<p><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png" alt="image_1as55s16qgogk1qpqvun3gj813.png-71.2kB"></p>
+<p>由上面我们可以知道, HTML DOM只是一种定义, 用来定义HTML文档的访问和操作的一种方法而已.<br>那么图中的HTML DOM树, 就是用HTML DOM用来将HTML的结构定义成一种树状结构而已.</p>
+<p>在点开 <a href="http://www.w3school.com.cn/htmldom/dom_intro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_intro.asp</a> 这个页面, 可以看到这么一段.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173818.png" alt="image_1as560dia1o9ccd51c6po751drq1g.png-22.6kB"><br>w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一个标准而已.</p>
+<h2 id="HTML-DOM节点是什么"><a href="#HTML-DOM节点是什么" class="headerlink" title="HTML DOM节点是什么?"></a>HTML DOM节点是什么?</h2><p>由上面我们知道DOM是用来定义东西的.<br>那么他是怎么定义的呢?<br>打开 <a href="http://www.w3school.com.cn/htmldom/dom_nodes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_nodes.asp</a> , 看到下面的这个说明.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173820.png" alt="image_1as5644t41p5hc12ec61bpv1nai1t.png-39kB"><br>那么我们知道DOM是把HTML中的所有东西都定义成节点, 或者通俗点的说在DOM的世界里他认为<strong>HTML文档中的所有东西都是节点</strong>(理解一下这个加粗的文本).<br>把节点分为以下5个类型.</p>
+<ol>
+<li>整个文档是一个<strong>文档节点</strong></li>
+<li>每个 HTML 元素是<strong>元素节点</strong></li>
+<li>HTML 元素内的文本是<strong>文本节点</strong></li>
+<li>每个(HTML元素中的) HTML 属性是<strong>属性节点</strong></li>
+<li>注释是<strong>注释节点</strong></li>
+</ol>
+<p>好了, 通过这个, 我们知道HTML DOM节点是上面的那5种类型.<br>那么有人之前可能还疑惑HTML元素和HTML DOM节点什么关系? 其实通过上面, 我们已经知道HTML元素只是HTML DOM节点的其中一种类型.<br>但我们大多数人一想到<strong>HTML DOM节点</strong>就会条件反射的认为不就是<strong>HTML元素</strong>嘛, 其实不然, HTML元素只是HTML DOM节点的中的一种.</p>
+<p><font color="red"><strong>注意</strong>:</font> 虽然<strong>HTML元素(节点)</strong>只是<strong>DOM节点</strong>的一种, 但我们操作DOM节点时, 实际上是用元素方法,属性,事件来操作HTML元素, 所以我们会认为大部分的时候我们操作的DOM节点都是HTML元素.<br><strong>再次强调</strong>: HTML元素不等于HTML DOM节点, HTML元素只是HTML DOM节点中的其中一种, HTML元素也更不等于HTML DOM, HTML DOM是用来定义HTML文档中<strong>所有内容</strong>的一种规范. 注意是所有内容而不是单单代表HTML元素.</p>
+<h2 id="HTML-DOM对象是什么"><a href="#HTML-DOM对象是什么" class="headerlink" title="HTML DOM对象是什么?"></a>HTML DOM对象是什么?</h2><p>我们打开: <a href="http://www.w3school.com.cn/jsref/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/index.asp</a><br>这个页面, 我们可以看到在左侧有个这一栏目.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173821.png" alt="image_1as57jhg911npb868dmj4mf182n.png-3.4kB"><br>下面4个子项. 可以看到: </p>
+<p><strong>HTML DOM对象</strong>一共包含:</p>
+<ol>
+<li><strong>DOM Document对象</strong>(文档对象)</li>
+<li><strong>DOM Element对象</strong>(元素对象)</li>
+<li><strong>DOM Attribute对象</strong>(属性对象)</li>
+<li><strong>DOM Event对象</strong>(事件对象)</li>
+</ol>
+<p><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173822.png" alt="image_1as5ah07sphn8ol1r943ccmr534.png-17.2kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173823.png" alt="image_1as5ahdc71hs74ud1hnq9qc1ob53h.png-10kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173824.png" alt="image_1as5ahl871ibqdr1m421tqv1hmg3u.png-4.6kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173825.png" alt="image_1as5ahsdm1e1j113711qs1f32ae74b.png-7.7kB"></p>
+<p>上面4个图是w3c官方给的解释, 这几个对象也就是为HTML DOM的一种封装, 这样子就方便我们操作, 同时这些对象在JS里都是可以访问的.<br>他们作用的就是将整个文档以及HTML元素封装成对象, 并对元素属性和事件也做封装, 让我们可以很方便的操作DOM.</p>
+<hr>
+<p>上面介绍完了, 下面说一下我遇到的坑..<br>DOM对象中的<strong>Element对象</strong>和<strong>Attribute对象</strong>, 他们的关系是: <strong>Element对象</strong>是对HTML 元素的封装, <strong>Attribute对象</strong>则是对象HTML元素中的属性进行封装.</p>
+<p>听起来有点绕, 以代码来说, 请运行一下下面这段代码.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"#"</span> method=<span class="string">"get"</span> name=<span class="string">"form"</span>&gt;</span><br><span class="line">  &lt;input type=<span class="string">"text"</span> name=<span class="string">"aa"</span> value=<span class="string">"123"</span>/&gt;</span><br><span class="line">&lt;<span class="regexp">/form&gt;</span></span><br><span class="line"><span class="regexp">&lt;button onclick="cc()"&gt;get value&lt;/</span>button&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/Javascript"</span>&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">cc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"Attribute对象访问value属性方式: "</span> + <span class="built_in">document</span>.form.aa.value); <span class="comment">// 这个会弹出你输入的值.</span></span><br><span class="line">    alert(<span class="string">"Element对象调用getAttribute()方法方式: "</span> + <span class="built_in">document</span>.form.aa.getAttribute(<span class="string">"value"</span>)); <span class="comment">// 而这个每次都弹出123, 就是通过代码写的value=123</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>打开页面之后, input输入框中默认值为123, 就是我们在代码里写的<code>value=&quot;123&quot;</code>.<br>此时页面打开了, 我们先把原来的123删掉, 输入一些别的东西.<br>然后单击按钮弹出2个提示框, 看一下前后2个值. 就知道两个值不一样了.</p>
+<p>例如我在input输入框中输入12312321321321, 我的输出结果是: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Attribute对象访问value属性方式: 12312321321321</span><br><span class="line">Element对象调用getAttribute()方法方式: 123</span><br></pre></td></tr></table></figure>
+<p>因为一个拿到的是Element对象, 一个拿到的是Attribute对象.<br>2者区别是: </p>
+<ol>
+<li>Attribute对象拿到的是输入框中的数据.</li>
+<li>Element对象拿到的是元素的初始数据(不知道这样说准不准确, 暂时这么说, 如果大家有标准的说法, 请回复告诉我.).</li>
+</ol>
+<p><strong>什么叫元素的初始数据?</strong><br>可以理解为你写代码时value值里写的值, 元素中的数据是不会变的.<br>我们可以通过审查元素来看看.<br>如图所示, 我在输入<strong>12312321321321</strong>之后, 元素里的123并没有改变.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173826.png" alt="image_1as5brodmi731r5f1ptc6riv974o.png-35.2kB"></p>
+<p>现在我们知道区别了. 但我想大家可能还有个疑惑的地方, 那就是大家可能还想要知道Attribute对象里面都可以访问哪些属性和方法.<br>可以在 <a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/dom_obj_attributes.asp</a> 这里看到有以下这些属性.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173829.png" alt="image_1as5c00fs9isij1kfu1jkmi5755.png-30.5kB"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">"in"</span>);<span class="comment">// 我们知道这个是拿到input这个HTML元素对象.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/***********************分隔符******************************/</span></span><br><span class="line"><span class="comment">// 这样写就是以Attribute对象的方式去访问元素value属性.</span></span><br><span class="line"><span class="keyword">var</span> value = input.value; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 而这样写是用Input这个Element对象去调用getAttribute方法的方式去访问元素的value属性值.</span></span><br><span class="line"><span class="keyword">var</span> value1 = input.getAttribute(<span class="string">"value"</span>); </span><br><span class="line"><span class="comment">/***********************分隔符******************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 以及在属性上面也是不一样的.</span></span><br><span class="line">input.value = <span class="string">"ABC123"</span>; <span class="comment">// 这样写是以Attribute对象的方式去设置属性.</span></span><br><span class="line">input.setAttribute(<span class="string">"value"</span>, <span class="string">"ABC123"</span>); <span class="comment">// 这样就是用Element对象的方式去设置属性.</span></span><br></pre></td></tr></table></figure>
+<p>那么我遇到的坑就是我用了Element对象想要修改input的value值, 然后想当然的提交到表单, 结果发现压根本就没有获取到修改后的值..<br>所以在表单提交时, 这是一个坑. 如果要设置值, 用Attribute对象的方式去访问元素的属性然后设置值.</p>
+<hr>
+<p>此文到此结束, 为了想将意思都说出来也是删删改改. 花了不少时间, 希望对大家有帮助. 共勉, cheers!</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>如果我的内容对您有所帮助, 可以小额打赏支持一下.</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="YrlixJoe WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="YrlixJoe Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      YrlixJoe
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/" title="HTML DOM基本概念及Element.getAttribute("value") 与Attribute.value差异">http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HtmlDom/" rel="tag"># HtmlDom</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/03/js-object-and-string-interconversion/" rel="next" title="js对象(object)与文本(string)互转">
+                <i class="fa fa-chevron-left"></i> js对象(object)与文本(string)互转
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/01/using-reflection-to-implements-BaseDao/" rel="prev" title="利用反射实现BaseDao">
+                利用反射实现BaseDao <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar.png"
+               alt="YrlixJoe" />
+          <p class="site-author-name" itemprop="name">YrlixJoe</p>
+           
+              <p class="site-description motion-element" itemprop="description">静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YrlixJoe" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/169635216/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/user/home?id=576915410" target="_blank" title="网易云">
+                  
+                    <i class="fa fa-fw fa-music"></i>
+                  
+                  网易云
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hacktech.cn/" title="Akkuman's Blog" target="_blank">Akkuman's Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://luuman.github.io/" title="Luuman's Blog" target="_blank">Luuman's Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-DOM是什么"><span class="nav-number">1.</span> <span class="nav-text">HTML DOM是什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-DOM节点是什么"><span class="nav-number">2.</span> <span class="nav-text">HTML DOM节点是什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-DOM对象是什么"><span class="nav-number">3.</span> <span class="nav-text">HTML DOM对象是什么?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+          <div class="copyright" >
+    
+    &copy;  2016 - 
+    <span itemprop="copyrightYear">2018</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder"><a href="/">YrlixJoe</a></span>
+    <span>版权所有</span>
+  </div>
+
+
+  <div class="hosted">
+   <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a> &amp; <a href="https://pages.github.com" style="font-weight: bold">Github Pages</a> </p>
+  </div>
+
+
+
+<div>
+
+  
+  <div class="powered-by">
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  </div>
+
+  <div class="theme-info">
+    主题 -
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Mist
+    </a>
+  </div>
+  
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      个访客
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次浏览
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yjoe.me/2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/';
+          this.page.identifier = '2016/09/09/html-dom-basic-conseption-and-difference-between-Element-getAttribute-value-and-Attribute-value/';
+          this.page.title = 'HTML DOM基本概念及Element.getAttribute(\"value\") 与Attribute.value差异';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yrlix.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.0"></script>
+
+
+  
+
+</body>
+</html>
