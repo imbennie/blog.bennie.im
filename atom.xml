@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>YrlixJoe</title>
+  <title>Bennie&#39;s Blog</title>
   
-  <subtitle>Welcome, Here is YrlixJoe&#39;s Blog.</subtitle>
+  <subtitle>Welcome, Here is Bennie&#39;s Blog.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yjoe.me/"/>
+  <link href="http://bennie.im/"/>
   <updated>2018-07-24T08:23:07.245Z</updated>
-  <id>http://yjoe.me/</id>
+  <id>http://bennie.im/</id>
   
   <author>
-    <name>YrlixJoe</name>
+    <name>Bennie</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Maven中的一些概念及笔记</title>
-    <link href="http://yjoe.me/2018/07/24/concepts-and-notes-in-maven/"/>
-    <id>http://yjoe.me/2018/07/24/concepts-and-notes-in-maven/</id>
+    <link href="http://bennie.im/2018/07/24/concepts-and-notes-in-maven/"/>
+    <id>http://bennie.im/2018/07/24/concepts-and-notes-in-maven/</id>
     <published>2018-07-24T07:36:13.000Z</published>
     <updated>2018-07-24T08:23:07.245Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
-      <category term="Maven" scheme="http://yjoe.me/tags/Maven/"/>
+      <category term="Maven" scheme="http://bennie.im/tags/Maven/"/>
     
   </entry>
   
   <entry>
     <title>Java中finally和return的执行顺序</title>
-    <link href="http://yjoe.me/2018/06/27/execution-order-of-finally-and-return-in-java/"/>
-    <id>http://yjoe.me/2018/06/27/execution-order-of-finally-and-return-in-java/</id>
+    <link href="http://bennie.im/2018/06/27/execution-order-of-finally-and-return-in-java/"/>
+    <id>http://bennie.im/2018/06/27/execution-order-of-finally-and-return-in-java/</id>
     <published>2018-06-26T18:12:26.000Z</published>
     <updated>2018-06-26T18:15:17.424Z</updated>
     
@@ -67,17 +67,17 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>记一下 Invalid bound statement (not found) 的问题</title>
-    <link href="http://yjoe.me/2018/06/02/Invalid-bound-statement-not-found-in-mybatis/"/>
-    <id>http://yjoe.me/2018/06/02/Invalid-bound-statement-not-found-in-mybatis/</id>
+    <link href="http://bennie.im/2018/06/02/Invalid-bound-statement-not-found-in-mybatis/"/>
+    <id>http://bennie.im/2018/06/02/Invalid-bound-statement-not-found-in-mybatis/</id>
     <published>2018-06-02T10:15:47.000Z</published>
     <updated>2018-06-02T10:49:36.369Z</updated>
     
@@ -89,19 +89,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Mybatis" scheme="http://bennie.im/tags/Mybatis/"/>
     
-      <category term="Mybatis" scheme="http://yjoe.me/tags/Mybatis/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>ps安装及破解过程</title>
-    <link href="http://yjoe.me/2018/05/21/ps-cs6-install-and-crack/"/>
-    <id>http://yjoe.me/2018/05/21/ps-cs6-install-and-crack/</id>
+    <link href="http://bennie.im/2018/05/21/ps-cs6-install-and-crack/"/>
+    <id>http://bennie.im/2018/05/21/ps-cs6-install-and-crack/</id>
     <published>2018-05-21T14:56:13.000Z</published>
     <updated>2018-05-29T17:38:32.394Z</updated>
     
@@ -114,17 +114,17 @@
     
     </summary>
     
-      <category term="工具" scheme="http://yjoe.me/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://bennie.im/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="PS" scheme="http://yjoe.me/tags/PS/"/>
+      <category term="PS" scheme="http://bennie.im/tags/PS/"/>
     
   </entry>
   
   <entry>
     <title>2018.05.17&amp;18 EB拓展训练日志——感受与收获</title>
-    <link href="http://yjoe.me/2018/05/18/Feeling-and-growth-in-the-EB-Expand-training/"/>
-    <id>http://yjoe.me/2018/05/18/Feeling-and-growth-in-the-EB-Expand-training/</id>
+    <link href="http://bennie.im/2018/05/18/Feeling-and-growth-in-the-EB-Expand-training/"/>
+    <id>http://bennie.im/2018/05/18/Feeling-and-growth-in-the-EB-Expand-training/</id>
     <published>2018-05-17T16:31:56.000Z</published>
     <updated>2018-09-12T05:22:48.566Z</updated>
     
@@ -137,19 +137,19 @@
     
     </summary>
     
-      <category term="生活" scheme="http://yjoe.me/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://bennie.im/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="拓展训练" scheme="http://yjoe.me/tags/%E6%8B%93%E5%B1%95%E8%AE%AD%E7%BB%83/"/>
+      <category term="拓展训练" scheme="http://bennie.im/tags/%E6%8B%93%E5%B1%95%E8%AE%AD%E7%BB%83/"/>
     
-      <category term="体验式学习" scheme="http://yjoe.me/tags/%E4%BD%93%E9%AA%8C%E5%BC%8F%E5%AD%A6%E4%B9%A0/"/>
+      <category term="体验式学习" scheme="http://bennie.im/tags/%E4%BD%93%E9%AA%8C%E5%BC%8F%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>A标签onclick事件取消默认行为</title>
-    <link href="http://yjoe.me/2017/11/24/onclick-event-on-an-a-element/"/>
-    <id>http://yjoe.me/2017/11/24/onclick-event-on-an-a-element/</id>
+    <link href="http://bennie.im/2017/11/24/onclick-event-on-an-a-element/"/>
+    <id>http://bennie.im/2017/11/24/onclick-event-on-an-a-element/</id>
     <published>2017-11-24T13:16:01.000Z</published>
     <updated>2018-06-05T13:21:21.892Z</updated>
     
@@ -162,17 +162,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yjoe.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bennie.im/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Javascript" scheme="http://yjoe.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="http://bennie.im/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>Spring Cloud Netflix多语言/非java语言支持Sidecar</title>
-    <link href="http://yjoe.me/2017/09/12/polyglot-support-with-sidecar/"/>
-    <id>http://yjoe.me/2017/09/12/polyglot-support-with-sidecar/</id>
+    <link href="http://bennie.im/2017/09/12/polyglot-support-with-sidecar/"/>
+    <id>http://bennie.im/2017/09/12/polyglot-support-with-sidecar/</id>
     <published>2017-09-12T04:09:27.000Z</published>
     <updated>2018-05-29T17:38:32.435Z</updated>
     
@@ -185,21 +185,21 @@
     
     </summary>
     
-      <category term="微服务" scheme="http://yjoe.me/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     
-      <category term="微服务" scheme="http://yjoe.me/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
-      <category term="Spring Cloud" scheme="http://yjoe.me/tags/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="http://bennie.im/tags/Spring-Cloud/"/>
     
-      <category term="Sidecar" scheme="http://yjoe.me/tags/Sidecar/"/>
+      <category term="Sidecar" scheme="http://bennie.im/tags/Sidecar/"/>
     
   </entry>
   
   <entry>
     <title>使用Sidecar将Node.js引入Spring Cloud</title>
-    <link href="http://yjoe.me/2017/09/11/using-sidecar-to-integration-with-nodejs-in-springcloud/"/>
-    <id>http://yjoe.me/2017/09/11/using-sidecar-to-integration-with-nodejs-in-springcloud/</id>
+    <link href="http://bennie.im/2017/09/11/using-sidecar-to-integration-with-nodejs-in-springcloud/"/>
+    <id>http://bennie.im/2017/09/11/using-sidecar-to-integration-with-nodejs-in-springcloud/</id>
     <published>2017-09-11T09:51:36.000Z</published>
     <updated>2018-05-29T17:38:32.406Z</updated>
     
@@ -211,21 +211,21 @@
     
     </summary>
     
-      <category term="微服务" scheme="http://yjoe.me/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     
-      <category term="微服务" scheme="http://yjoe.me/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
-      <category term="Spring Cloud" scheme="http://yjoe.me/tags/Spring-Cloud/"/>
+      <category term="Spring Cloud" scheme="http://bennie.im/tags/Spring-Cloud/"/>
     
-      <category term="Sidecar" scheme="http://yjoe.me/tags/Sidecar/"/>
+      <category term="Sidecar" scheme="http://bennie.im/tags/Sidecar/"/>
     
   </entry>
   
   <entry>
     <title>使用其他(非java)语言开发Eureka客户端</title>
-    <link href="http://yjoe.me/2017/09/06/eureka-rest-operations/"/>
-    <id>http://yjoe.me/2017/09/06/eureka-rest-operations/</id>
+    <link href="http://bennie.im/2017/09/06/eureka-rest-operations/"/>
+    <id>http://bennie.im/2017/09/06/eureka-rest-operations/</id>
     <published>2017-09-06T09:13:42.000Z</published>
     <updated>2018-05-29T17:38:32.403Z</updated>
     
@@ -237,19 +237,19 @@
     
     </summary>
     
-      <category term="微服务" scheme="http://yjoe.me/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     
-      <category term="Eureka" scheme="http://yjoe.me/tags/Eureka/"/>
+      <category term="Eureka" scheme="http://bennie.im/tags/Eureka/"/>
     
-      <category term="微服务" scheme="http://yjoe.me/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <category term="微服务" scheme="http://bennie.im/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>多个SSH连接配置之HEXO部署</title>
-    <link href="http://yjoe.me/2017/08/20/hexo-deploy-with-multiple-ssh-config/"/>
-    <id>http://yjoe.me/2017/08/20/hexo-deploy-with-multiple-ssh-config/</id>
+    <link href="http://bennie.im/2017/08/20/hexo-deploy-with-multiple-ssh-config/"/>
+    <id>http://bennie.im/2017/08/20/hexo-deploy-with-multiple-ssh-config/</id>
     <published>2017-08-20T13:18:05.000Z</published>
     <updated>2018-05-29T17:38:32.437Z</updated>
     
@@ -262,21 +262,21 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yjoe.me/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://bennie.im/categories/Hexo/"/>
     
     
-      <category term="SSH" scheme="http://yjoe.me/tags/SSH/"/>
+      <category term="Hexo" scheme="http://bennie.im/tags/Hexo/"/>
     
-      <category term="Hexo" scheme="http://yjoe.me/tags/Hexo/"/>
+      <category term="SSH" scheme="http://bennie.im/tags/SSH/"/>
     
-      <category term="SSHConfig" scheme="http://yjoe.me/tags/SSHConfig/"/>
+      <category term="SSHConfig" scheme="http://bennie.im/tags/SSHConfig/"/>
     
   </entry>
   
   <entry>
     <title>Eclipse配置所有工作空间默认文件编码</title>
-    <link href="http://yjoe.me/2017/08/18/configure-default-file-encoding-for-all-workspace-of-eclipse/"/>
-    <id>http://yjoe.me/2017/08/18/configure-default-file-encoding-for-all-workspace-of-eclipse/</id>
+    <link href="http://bennie.im/2017/08/18/configure-default-file-encoding-for-all-workspace-of-eclipse/"/>
+    <id>http://bennie.im/2017/08/18/configure-default-file-encoding-for-all-workspace-of-eclipse/</id>
     <published>2017-08-18T15:57:30.000Z</published>
     <updated>2018-05-29T17:38:32.427Z</updated>
     
@@ -292,19 +292,19 @@
     
     </summary>
     
-      <category term="工具" scheme="http://yjoe.me/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://bennie.im/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Eclipse" scheme="http://yjoe.me/tags/Eclipse/"/>
+      <category term="Eclipse" scheme="http://bennie.im/tags/Eclipse/"/>
     
-      <category term="工具" scheme="http://yjoe.me/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://bennie.im/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Chrome主题背景图URL地址</title>
-    <link href="http://yjoe.me/2017/08/15/chrome-theme-background-image-url/"/>
-    <id>http://yjoe.me/2017/08/15/chrome-theme-background-image-url/</id>
+    <link href="http://bennie.im/2017/08/15/chrome-theme-background-image-url/"/>
+    <id>http://bennie.im/2017/08/15/chrome-theme-background-image-url/</id>
     <published>2017-08-15T05:33:47.000Z</published>
     <updated>2018-05-29T17:38:32.426Z</updated>
     
@@ -320,17 +320,17 @@
     
     </summary>
     
-      <category term="Chrome" scheme="http://yjoe.me/categories/Chrome/"/>
+      <category term="Chrome" scheme="http://bennie.im/categories/Chrome/"/>
     
     
-      <category term="Chrome" scheme="http://yjoe.me/tags/Chrome/"/>
+      <category term="Chrome" scheme="http://bennie.im/tags/Chrome/"/>
     
   </entry>
   
   <entry>
     <title>网页文本完全水平+垂直居中</title>
-    <link href="http://yjoe.me/2017/08/01/web-page-horizantal-and-vertical/"/>
-    <id>http://yjoe.me/2017/08/01/web-page-horizantal-and-vertical/</id>
+    <link href="http://bennie.im/2017/08/01/web-page-horizantal-and-vertical/"/>
+    <id>http://bennie.im/2017/08/01/web-page-horizantal-and-vertical/</id>
     <published>2017-08-01T15:20:57.000Z</published>
     <updated>2018-06-05T13:19:38.152Z</updated>
     
@@ -343,21 +343,21 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yjoe.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bennie.im/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="CSS" scheme="http://yjoe.me/tags/CSS/"/>
+      <category term="CSS" scheme="http://bennie.im/tags/CSS/"/>
     
-      <category term="table-cell" scheme="http://yjoe.me/tags/table-cell/"/>
+      <category term="table-cell" scheme="http://bennie.im/tags/table-cell/"/>
     
-      <category term="postition" scheme="http://yjoe.me/tags/postition/"/>
+      <category term="postition" scheme="http://bennie.im/tags/postition/"/>
     
   </entry>
   
   <entry>
     <title>如何使用SSH配置文件进行SSH连接</title>
-    <link href="http://yjoe.me/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/"/>
-    <id>http://yjoe.me/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/</id>
+    <link href="http://bennie.im/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/"/>
+    <id>http://bennie.im/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/</id>
     <published>2017-06-13T17:30:16.000Z</published>
     <updated>2018-05-29T17:38:32.434Z</updated>
     
@@ -372,17 +372,17 @@
     
     </summary>
     
-      <category term="SSH" scheme="http://yjoe.me/categories/SSH/"/>
+      <category term="SSH" scheme="http://bennie.im/categories/SSH/"/>
     
     
-      <category term="SSH" scheme="http://yjoe.me/tags/SSH/"/>
+      <category term="SSH" scheme="http://bennie.im/tags/SSH/"/>
     
   </entry>
   
   <entry>
     <title>谷歌验证码jar包Kaptcha的使用和运行过程</title>
-    <link href="http://yjoe.me/2017/04/17/google-s-kaptcha-jar-usage-and-running-process/"/>
-    <id>http://yjoe.me/2017/04/17/google-s-kaptcha-jar-usage-and-running-process/</id>
+    <link href="http://bennie.im/2017/04/17/google-s-kaptcha-jar-usage-and-running-process/"/>
+    <id>http://bennie.im/2017/04/17/google-s-kaptcha-jar-usage-and-running-process/</id>
     <published>2017-04-17T15:25:36.000Z</published>
     <updated>2018-05-29T17:38:32.436Z</updated>
     
@@ -396,19 +396,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
-      <category term="验证码Jar包" scheme="http://yjoe.me/tags/%E9%AA%8C%E8%AF%81%E7%A0%81Jar%E5%8C%85/"/>
+      <category term="验证码Jar包" scheme="http://bennie.im/tags/%E9%AA%8C%E8%AF%81%E7%A0%81Jar%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>遍历List集合时出现的3种异常</title>
-    <link href="http://yjoe.me/2017/04/10/three-exception-will-be-happenning-when-interaotr-a-list/"/>
-    <id>http://yjoe.me/2017/04/10/three-exception-will-be-happenning-when-interaotr-a-list/</id>
+    <link href="http://bennie.im/2017/04/10/three-exception-will-be-happenning-when-interaotr-a-list/"/>
+    <id>http://bennie.im/2017/04/10/three-exception-will-be-happenning-when-interaotr-a-list/</id>
     <published>2017-04-10T13:29:48.000Z</published>
     <updated>2018-05-29T17:38:32.397Z</updated>
     
@@ -422,23 +422,23 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
-      <category term="异常" scheme="http://yjoe.me/tags/%E5%BC%82%E5%B8%B8/"/>
+      <category term="异常" scheme="http://bennie.im/tags/%E5%BC%82%E5%B8%B8/"/>
     
-      <category term="迭代器" scheme="http://yjoe.me/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
+      <category term="迭代器" scheme="http://bennie.im/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
     
-      <category term="集合" scheme="http://yjoe.me/tags/%E9%9B%86%E5%90%88/"/>
+      <category term="集合" scheme="http://bennie.im/tags/%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
   <entry>
     <title>java多态中的虚方法调用</title>
-    <link href="http://yjoe.me/2017/02/19/virtual-method-invoke-in-java/"/>
-    <id>http://yjoe.me/2017/02/19/virtual-method-invoke-in-java/</id>
+    <link href="http://bennie.im/2017/02/19/virtual-method-invoke-in-java/"/>
+    <id>http://bennie.im/2017/02/19/virtual-method-invoke-in-java/</id>
     <published>2017-02-18T16:17:27.000Z</published>
     <updated>2018-05-29T17:38:32.428Z</updated>
     
@@ -451,21 +451,21 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yjoe.me/categories/Java/"/>
+      <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yjoe.me/tags/Java/"/>
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
-      <category term="虚方法" scheme="http://yjoe.me/tags/%E8%99%9A%E6%96%B9%E6%B3%95/"/>
+      <category term="虚方法" scheme="http://bennie.im/tags/%E8%99%9A%E6%96%B9%E6%B3%95/"/>
     
-      <category term="多态" scheme="http://yjoe.me/tags/%E5%A4%9A%E6%80%81/"/>
+      <category term="多态" scheme="http://bennie.im/tags/%E5%A4%9A%E6%80%81/"/>
     
   </entry>
   
   <entry>
     <title>HTML图片预览及AJAX上传</title>
-    <link href="http://yjoe.me/2017/01/02/image-preview-and-ajax-image-upload/"/>
-    <id>http://yjoe.me/2017/01/02/image-preview-and-ajax-image-upload/</id>
+    <link href="http://bennie.im/2017/01/02/image-preview-and-ajax-image-upload/"/>
+    <id>http://bennie.im/2017/01/02/image-preview-and-ajax-image-upload/</id>
     <published>2017-01-02T12:16:39.000Z</published>
     <updated>2018-06-05T13:17:58.234Z</updated>
     
@@ -480,21 +480,21 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yjoe.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bennie.im/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Javascript" scheme="http://yjoe.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="http://bennie.im/tags/Javascript/"/>
     
-      <category term="Ajax" scheme="http://yjoe.me/tags/Ajax/"/>
+      <category term="Ajax" scheme="http://bennie.im/tags/Ajax/"/>
     
-      <category term="HTML5" scheme="http://yjoe.me/tags/HTML5/"/>
+      <category term="HTML5" scheme="http://bennie.im/tags/HTML5/"/>
     
   </entry>
   
   <entry>
     <title>JS拖拽图片简单例子</title>
-    <link href="http://yjoe.me/2017/01/01/js-drag-drop-image-small-example/"/>
-    <id>http://yjoe.me/2017/01/01/js-drag-drop-image-small-example/</id>
+    <link href="http://bennie.im/2017/01/01/js-drag-drop-image-small-example/"/>
+    <id>http://bennie.im/2017/01/01/js-drag-drop-image-small-example/</id>
     <published>2016-12-31T20:50:00.000Z</published>
     <updated>2018-06-05T13:18:31.882Z</updated>
     
@@ -515,17 +515,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yjoe.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bennie.im/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Javascript" scheme="http://yjoe.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="http://bennie.im/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>JS获取项目路径</title>
-    <link href="http://yjoe.me/2016/12/25/js-get-project-path/"/>
-    <id>http://yjoe.me/2016/12/25/js-get-project-path/</id>
+    <link href="http://bennie.im/2016/12/25/js-get-project-path/"/>
+    <id>http://bennie.im/2016/12/25/js-get-project-path/</id>
     <published>2016-12-25T11:06:27.000Z</published>
     <updated>2018-06-05T13:18:40.445Z</updated>
     
@@ -538,10 +538,10 @@
     
     </summary>
     
-      <category term="前端" scheme="http://yjoe.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bennie.im/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Javascript" scheme="http://yjoe.me/tags/Javascript/"/>
+      <category term="Javascript" scheme="http://bennie.im/tags/Javascript/"/>
     
   </entry>
   
