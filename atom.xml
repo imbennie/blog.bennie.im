@@ -92,9 +92,9 @@
       <category term="Java" scheme="http://bennie.im/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
-    
       <category term="Mybatis" scheme="http://bennie.im/tags/Mybatis/"/>
+    
+      <category term="Java" scheme="http://bennie.im/tags/Java/"/>
     
   </entry>
   
@@ -265,9 +265,9 @@
       <category term="Hexo" scheme="http://bennie.im/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://bennie.im/tags/Hexo/"/>
-    
       <category term="SSH" scheme="http://bennie.im/tags/SSH/"/>
+    
+      <category term="Hexo" scheme="http://bennie.im/tags/Hexo/"/>
     
       <category term="SSHConfig" scheme="http://bennie.im/tags/SSHConfig/"/>
     
