@@ -97,21 +97,21 @@
 <meta property="og:site_name" content="Bennie&#39;s Blog">
 <meta property="og:description" content="今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性. 我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.此文也算是作为本人个人的学习笔记, 与大家共勉.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173818.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173820.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173821.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173822.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173823.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173824.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173825.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173826.png">
-<meta property="og:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173829.png">
-<meta property="og:updated_time" content="2018-06-05T13:18:09.649Z">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173817.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173818.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173820.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173821.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173822.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173823.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173824.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173825.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173826.png">
+<meta property="og:image" content="http://bennie.im/images/2018-05-29-173829.png">
+<meta property="og:updated_time" content="2018-12-29T08:18:28.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML DOM基本概念及Element.getAttribute(&quot;value&quot;) 与Attribute.value差异">
 <meta name="twitter:description" content="今晚整理博客一个小功能的时候写个js, 发现了一个坑.. 一不小心就掉进去的坑..弄明白之后, 本想针对此坑写写见解就完了, 但觉得趁这个机会顺便再次说一下HTML DOM相关的东东以加深理解及知识的相关性. 我一般喜欢以提问然后解决问题的方式学习, 在开始之前我先提出3个问题并对其说明及解释, 然后再引出后面的一些小问题及表述.此文也算是作为本人个人的学习笔记, 与大家共勉.">
-<meta name="twitter:image" content="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png">
+<meta name="twitter:image" content="http://bennie.im/images/2018-05-29-173817.png">
 
 
 
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-05T21:18:09+08:00">
-                2018-06-05
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-29T16:18:28+08:00">
+                2018-12-29
               </time>
             
           </span>
@@ -432,10 +432,10 @@
 <blockquote>
 </blockquote>
 <p>HTML DOM 定义了访问和操作 HTML 文档的标准方法。<br>DOM 将 HTML 文档表达为树结构。</p>
-<p><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png" alt="image_1as55s16qgogk1qpqvun3gj813.png-71.2kB"></p>
+<p><img src="/images/2018-05-29-173817.png" alt="image_1as55s16qgogk1qpqvun3gj813.png-71.2kB"></p>
 <p>由上面我们可以知道, HTML DOM只是一种定义, 用来定义HTML文档的访问和操作的一种方法而已.<br>那么图中的HTML DOM树, 就是用HTML DOM用来将HTML的结构定义成一种树状结构而已.</p>
-<p>在点开 <a href="http://www.w3school.com.cn/htmldom/dom_intro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_intro.asp</a> 这个页面, 可以看到这么一段.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173818.png" alt="image_1as560dia1o9ccd51c6po751drq1g.png-22.6kB"><br>w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一个标准而已.</p>
-<h2 id="HTML-DOM节点是什么"><a href="#HTML-DOM节点是什么" class="headerlink" title="HTML DOM节点是什么?"></a>HTML DOM节点是什么?</h2><p>由上面我们知道DOM是用来定义东西的.<br>那么他是怎么定义的呢?<br>打开 <a href="http://www.w3school.com.cn/htmldom/dom_nodes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_nodes.asp</a> , 看到下面的这个说明.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173820.png" alt="image_1as5644t41p5hc12ec61bpv1nai1t.png-39kB"><br>那么我们知道DOM是把HTML中的所有东西都定义成节点, 或者通俗点的说在DOM的世界里他认为<strong>HTML文档中的所有东西都是节点</strong>(理解一下这个加粗的文本).<br>把节点分为以下5个类型.</p>
+<p>在点开 <a href="http://www.w3school.com.cn/htmldom/dom_intro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_intro.asp</a> 这个页面, 可以看到这么一段.<br><img src="/images/2018-05-29-173818.png" alt="image_1as560dia1o9ccd51c6po751drq1g.png-22.6kB"><br>w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一个标准而已.</p>
+<h2 id="HTML-DOM节点是什么"><a href="#HTML-DOM节点是什么" class="headerlink" title="HTML DOM节点是什么?"></a>HTML DOM节点是什么?</h2><p>由上面我们知道DOM是用来定义东西的.<br>那么他是怎么定义的呢?<br>打开 <a href="http://www.w3school.com.cn/htmldom/dom_nodes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/htmldom/dom_nodes.asp</a> , 看到下面的这个说明.<br><img src="/images/2018-05-29-173820.png" alt="image_1as5644t41p5hc12ec61bpv1nai1t.png-39kB"><br>那么我们知道DOM是把HTML中的所有东西都定义成节点, 或者通俗点的说在DOM的世界里他认为<strong>HTML文档中的所有东西都是节点</strong>(理解一下这个加粗的文本).<br>把节点分为以下5个类型.</p>
 <ol>
 <li>整个文档是一个<strong>文档节点</strong></li>
 <li>每个 HTML 元素是<strong>元素节点</strong></li>
@@ -445,7 +445,7 @@
 </ol>
 <p>好了, 通过这个, 我们知道HTML DOM节点是上面的那5种类型.<br>那么有人之前可能还疑惑HTML元素和HTML DOM节点什么关系? 其实通过上面, 我们已经知道HTML元素只是HTML DOM节点的其中一种类型.<br>但我们大多数人一想到<strong>HTML DOM节点</strong>就会条件反射的认为不就是<strong>HTML元素</strong>嘛, 其实不然, HTML元素只是HTML DOM节点的中的一种.</p>
 <p><font color="red"><strong>注意</strong>:</font> 虽然<strong>HTML元素(节点)</strong>只是<strong>DOM节点</strong>的一种, 但我们操作DOM节点时, 实际上是用元素方法,属性,事件来操作HTML元素, 所以我们会认为大部分的时候我们操作的DOM节点都是HTML元素.<br><strong>再次强调</strong>: HTML元素不等于HTML DOM节点, HTML元素只是HTML DOM节点中的其中一种, HTML元素也更不等于HTML DOM, HTML DOM是用来定义HTML文档中<strong>所有内容</strong>的一种规范. 注意是所有内容而不是单单代表HTML元素.</p>
-<h2 id="HTML-DOM对象是什么"><a href="#HTML-DOM对象是什么" class="headerlink" title="HTML DOM对象是什么?"></a>HTML DOM对象是什么?</h2><p>我们打开: <a href="http://www.w3school.com.cn/jsref/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/index.asp</a><br>这个页面, 我们可以看到在左侧有个这一栏目.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173821.png" alt="image_1as57jhg911npb868dmj4mf182n.png-3.4kB"><br>下面4个子项. 可以看到: </p>
+<h2 id="HTML-DOM对象是什么"><a href="#HTML-DOM对象是什么" class="headerlink" title="HTML DOM对象是什么?"></a>HTML DOM对象是什么?</h2><p>我们打开: <a href="http://www.w3school.com.cn/jsref/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/index.asp</a><br>这个页面, 我们可以看到在左侧有个这一栏目.<br><img src="/images/2018-05-29-173821.png" alt="image_1as57jhg911npb868dmj4mf182n.png-3.4kB"><br>下面4个子项. 可以看到: </p>
 <p><strong>HTML DOM对象</strong>一共包含:</p>
 <ol>
 <li><strong>DOM Document对象</strong>(文档对象)</li>
@@ -453,7 +453,7 @@
 <li><strong>DOM Attribute对象</strong>(属性对象)</li>
 <li><strong>DOM Event对象</strong>(事件对象)</li>
 </ol>
-<p><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173822.png" alt="image_1as5ah07sphn8ol1r943ccmr534.png-17.2kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173823.png" alt="image_1as5ahdc71hs74ud1hnq9qc1ob53h.png-10kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173824.png" alt="image_1as5ahl871ibqdr1m421tqv1hmg3u.png-4.6kB"><br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173825.png" alt="image_1as5ahsdm1e1j113711qs1f32ae74b.png-7.7kB"></p>
+<p><img src="/images/2018-05-29-173822.png" alt="image_1as5ah07sphn8ol1r943ccmr534.png-17.2kB"><br><img src="/images/2018-05-29-173823.png" alt="image_1as5ahdc71hs74ud1hnq9qc1ob53h.png-10kB"><br><img src="/images/2018-05-29-173824.png" alt="image_1as5ahl871ibqdr1m421tqv1hmg3u.png-4.6kB"><br><img src="/images/2018-05-29-173825.png" alt="image_1as5ahsdm1e1j113711qs1f32ae74b.png-7.7kB"></p>
 <p>上面4个图是w3c官方给的解释, 这几个对象也就是为HTML DOM的一种封装, 这样子就方便我们操作, 同时这些对象在JS里都是可以访问的.<br>他们作用的就是将整个文档以及HTML元素封装成对象, 并对元素属性和事件也做封装, 让我们可以很方便的操作DOM.</p>
 <hr>
 <p>上面介绍完了, 下面说一下我遇到的坑..<br>DOM对象中的<strong>Element对象</strong>和<strong>Attribute对象</strong>, 他们的关系是: <strong>Element对象</strong>是对HTML 元素的封装, <strong>Attribute对象</strong>则是对象HTML元素中的属性进行封装.</p>
@@ -466,8 +466,8 @@
 <li>Attribute对象拿到的是输入框中的数据.</li>
 <li>Element对象拿到的是元素的初始数据(不知道这样说准不准确, 暂时这么说, 如果大家有标准的说法, 请回复告诉我.).</li>
 </ol>
-<p><strong>什么叫元素的初始数据?</strong><br>可以理解为你写代码时value值里写的值, 元素中的数据是不会变的.<br>我们可以通过审查元素来看看.<br>如图所示, 我在输入<strong>12312321321321</strong>之后, 元素里的123并没有改变.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173826.png" alt="image_1as5brodmi731r5f1ptc6riv974o.png-35.2kB"></p>
-<p>现在我们知道区别了. 但我想大家可能还有个疑惑的地方, 那就是大家可能还想要知道Attribute对象里面都可以访问哪些属性和方法.<br>可以在 <a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/dom_obj_attributes.asp</a> 这里看到有以下这些属性.<br><img src="http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173829.png" alt="image_1as5c00fs9isij1kfu1jkmi5755.png-30.5kB"></p>
+<p><strong>什么叫元素的初始数据?</strong><br>可以理解为你写代码时value值里写的值, 元素中的数据是不会变的.<br>我们可以通过审查元素来看看.<br>如图所示, 我在输入<strong>12312321321321</strong>之后, 元素里的123并没有改变.<br><img src="/images/2018-05-29-173826.png" alt="image_1as5brodmi731r5f1ptc6riv974o.png-35.2kB"></p>
+<p>现在我们知道区别了. 但我想大家可能还有个疑惑的地方, 那就是大家可能还想要知道Attribute对象里面都可以访问哪些属性和方法.<br>可以在 <a href="http://www.w3school.com.cn/jsref/dom_obj_attributes.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/jsref/dom_obj_attributes.asp</a> 这里看到有以下这些属性.<br><img src="/images/2018-05-29-173829.png" alt="image_1as5c00fs9isij1kfu1jkmi5755.png-30.5kB"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">"in"</span>);<span class="comment">// 我们知道这个是拿到input这个HTML元素对象.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/***********************分隔符******************************/</span></span><br><span class="line"><span class="comment">// 这样写就是以Attribute对象的方式去访问元素value属性.</span></span><br><span class="line"><span class="keyword">var</span> value = input.value; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 而这样写是用Input这个Element对象去调用getAttribute方法的方式去访问元素的value属性值.</span></span><br><span class="line"><span class="keyword">var</span> value1 = input.getAttribute(<span class="string">"value"</span>); </span><br><span class="line"><span class="comment">/***********************分隔符******************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 以及在属性上面也是不一样的.</span></span><br><span class="line">input.value = <span class="string">"ABC123"</span>; <span class="comment">// 这样写是以Attribute对象的方式去设置属性.</span></span><br><span class="line">input.setAttribute(<span class="string">"value"</span>, <span class="string">"ABC123"</span>); <span class="comment">// 这样就是用Element对象的方式去设置属性.</span></span><br></pre></td></tr></table></figure>
 <p>那么我遇到的坑就是我用了Element对象想要修改input的value值, 然后想当然的提交到表单, 结果发现压根本就没有获取到修改后的值..<br>所以在表单提交时, 这是一个坑. 如果要设置值, 用Attribute对象的方式去访问元素的属性然后设置值.</p>
 <hr>
