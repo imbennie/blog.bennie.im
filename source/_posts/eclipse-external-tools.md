@@ -14,12 +14,12 @@ categories:
 但Eclipse已经给我们提供了一种方式来解决这个问题, 提供了一个`External Tools`这个东东.
 在菜单栏上的`Run->External Tools->External Tools Configurations`这个地方
 或者工具栏如果有图标的话,直接点击也可以.
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173830.png)
+![](/images/2018-05-29-173830.png)
 
 <!-- more -->
 
 打开后就可以进行配置了. 
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173830.jpg)
+![](/images/2018-05-29-173830.jpg)
 先选中`Program`, 接着点击左上角那个新建图标, 创建一个配置.
 `Location`输入`C:\Windows\explorer.exe`,表示文件浏览器.
 `Araguments`输入`${selected_resource_loc}`这个参数会返回已经当前选中资源的绝对路径.

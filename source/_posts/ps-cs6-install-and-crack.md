@@ -15,7 +15,7 @@ categories:
 
 <!-- more -->
 打开网盘链接后，把这两个文件下载下来。
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173621.jpg)
+![](/images/2018-05-29-173621.jpg)
 
 
 
@@ -24,23 +24,23 @@ categories:
 
 
 下载后，把压缩包都解压成文件夹。
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173623.jpg)
+![](/images/2018-05-29-173623.jpg)
 
 左边的是破解程序的文件夹，右边是ps软件本身的安装文件夹。
 
 **下面是安装及破解步骤，先来安装PS软件本身。**
 1. 找到ps软件的安装程序。依次打开找到**Set-up.exe**
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173624.jpg)
+![](/images/2018-05-29-173624.jpg)
 
 
 
 2. 打开后显示这样子，点击忽略就行了。
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173625.jpg)
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173626.jpg)
+![](/images/2018-05-29-173625.jpg)
+![](/images/2018-05-29-173626.jpg)
 
 
 3. 这时候选择**试用**
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173627.jpg)
+![](/images/2018-05-29-173627.jpg)
 
 
 
@@ -49,17 +49,17 @@ categories:
 账号: keitpyocshe@hotmail.com 
 密码:ITpegsItEimKee3
 点登录后可能有点慢，因为要去连接的国外的服务器验证账号密码的正确性。
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173628.jpg)
+![](/images/2018-05-29-173628.jpg)
 这里点击**跳过**
 
 5. 接下来选择安装位置进行安装就行了，**安装位置建议选择安装到D盘。**
 <font color="red">安装的地方要记住，后面还会用到的。</font>
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173629.jpg)
+![](/images/2018-05-29-173629.jpg)
 
 6. 安装完成之后可以在桌面上找到ps的图标，如果桌面上没有，也可以在开始菜单中找到ps的图标
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173631.jpg)
+![](/images/2018-05-29-173631.jpg)
 随便选择一个打开，然后说是处于试用期。点击**开始试用**就可以了。
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173632.jpg)
+![](/images/2018-05-29-173632.jpg)
 
 
 
@@ -70,27 +70,27 @@ categories:
 这样就完成安装了，下面开始破解，<font color="red">在开始破解之前记得关掉刚才打开的PS软件。</font>
 
 1. **找到破解程序的文件夹**，文件夹里的文件大概是这样子的。
-  ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173633.jpg)
-  ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173635.jpg)
+  ![](/images/2018-05-29-173633.jpg)
+  ![](/images/2018-05-29-173635.jpg)
 
   - 左边的**Crack.bat**是屏蔽hosts文件地址用的(目的是为了屏蔽ps软件与服务器的通信阻止他验证软件的激活状态)。
   - 右边的**amtlib.dll**是破解补丁文件。
 
   先运行一下Crack.bat这个文件，运行的时候记得选择**以管理员的身份运行**(注意: 进行这个步骤时建议暂时退出杀毒软件。)
-  ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173636.jpg)
+  ![](/images/2018-05-29-173636.jpg)
 
 2. 运行后弹出这个黑色窗口，提示按任意键继续后，随便按键盘上一个键关掉这个窗口就行。
-  ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173638.jpg)
+  ![](/images/2018-05-29-173638.jpg)
 
 3. 现在打开ps软件的安装文件夹，比如我上面安装到了这个位置。
-    ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173639.jpg)
-    ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173640.jpg)
+    ![](/images/2018-05-29-173639.jpg)
+    ![](/images/2018-05-29-173640.jpg)
     在安装目录下可以看到有5个文件夹，其中后面的2个文件夹带64 Bit的是64位的软件，不带的是32位。之前的破解补丁分别有32位和64位。
-    ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173641.jpg)
+    ![](/images/2018-05-29-173641.jpg)
 
 4. 这时候，把它们里面的amtlib.dll文件分别复制到PS安装目录下对应的文件夹中替换掉原来的文件就行了。
    替换的时候记得选择第一个**“复制和替换”**
-   ![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173642.jpg)
+   ![](/images/2018-05-29-173642.jpg)
 
 
 

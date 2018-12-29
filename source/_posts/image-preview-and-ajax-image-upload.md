@@ -11,7 +11,7 @@ categories:
 
 
 图片上传前预览，然后ajax上传到服务器一个简单的实现.
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173832.jpg)
+![](/images/2018-05-29-173832.jpg)
 
 用CSS做了一些界面上的处理，预览是用HTML5中的File和FileRead对象来实现(具体看下文代码注释中描述)，AJAX上传部分主要用到了FormData对象，该对象的作用就是可以让AJAX来异步上传一个二进制文件。
 后端的处理代码用到是Servlet中提供的两个框架，分别是: `commons-fileupload-1.3.1.jar`和`commons-io-2.4.jar`，可以在: http://archive.apache.org/dist/commons/ 下载到这2个jar包.

@@ -28,13 +28,13 @@ categories:
 
 ### 方式2
 首先，需要在管理拓展的地方勾选开发者模式（Developer mode）。
-![1.jpg](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173616.png)
+![1.jpg](/images/2018-05-29-173616.png)
 
 接着将 testExtention.crx 改名为 testExtention.zip
 然后用解压缩工具解压为文件夹 testExtention
-![2.jpg](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173617.png)
+![2.jpg](/images/2018-05-29-173617.png)
 
 接着在 Chrome 设置拓展的地方，点击加载未打包的拓展（Load unpacked extension...）
-![3.jpg](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173618.png)
+![3.jpg](/images/2018-05-29-173618.png)
 即可：
-![4.jpg](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173620.png)
+![4.jpg](/images/2018-05-29-173620.png)

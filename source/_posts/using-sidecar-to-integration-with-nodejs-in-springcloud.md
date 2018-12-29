@@ -121,7 +121,7 @@ info:
 ```
 所以将Node.js应用通过Sidecar接入Spring Cloud微服务集群的整体架构，大致就如下图:
 
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173644.png)
+![](/images/2018-05-29-173644.png)
 
 
 
@@ -212,7 +212,7 @@ app.get('/book/:id', (req, res, next) => {
 也是先用[faker](https://github.com/marak/Faker.js/)来mock100条数据,然后写一条简单的get路由。
 
 启动后，我们用浏览器访问下[http://localhost:3000/book/1](http://localhost:3000/book/1)
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173645.png)
+![](/images/2018-05-29-173645.png)
 
 
 
@@ -254,12 +254,12 @@ hystrix:
 这里指定了sidecar所指向的node.js服务的地址,`hystrix.command.default.execution.timeout.enabled: false`主要是因为sidecar使用了hystrix的默认为一秒的超时熔断器，国内访问github的速度你懂的，我在测试时访问config-server经常超时，所以我就把它跟disable掉了，你也可以选择把超时时间配长一点。
 
 将eureka-server，config-server，user-service，node-sidecar, node-book-service都启动后，我们打开eureka的主页面[http://localhost:8700/](http://localhost:8700/)：
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173647.png)
+![](/images/2018-05-29-173647.png)
 
 
 
 看到我们的服务都处于UP状态，说明一切正常。接下来在看看Node.js应用的控制台：
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173650.png)
+![](/images/2018-05-29-173650.png)
 
 
 发现已经有流量打进来了，访问的接口是`/health`，很明显这就是node-sidecar对我们的node应用进行健康检查的调用。
@@ -306,7 +306,7 @@ app.get('/books', (req, res, next) => {
 ```
 
 我们访问下[http://localhost:3000/book/2/author](http://localhost:3000/book/2/author),可以看到返回了bookId为2的作者信息。但是这里有一个问题，我们并不能像代理到user-service那样通过访问[http://localhost:8741/node-sidecar/book/1](http://localhost:8741/node-sidecar/book/1)来访问Node.js的接口，那么怎么让user-service拿到book-service的数据呢？看下最开始的理论知识部分，我们可以通过访问`/hosts/<serviceId>`获取到各个服务的相关信息，我们来试下访问[http://localhost:8741/hosts/node-sidecar](http://localhost:8741/hosts/node-sidecar)得到如下结果：
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173653.png)
+![](/images/2018-05-29-173653.png)
 
 
 
@@ -347,7 +347,7 @@ public Author getAuthor(@PathVariable Long id) {
 逻辑也很简单，获取对应user，根据uid从bookFeignClient获取books，然后构建author返回。
 
 我们访问下[http://localhost:8720/author/11](http://localhost:8720/author/11)看下返回结果：
-![](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173655.png)
+![](/images/2018-05-29-173655.png)
 
 
 需要注意由于是随机数据，可能需要换几个authorId才能看到这样的结果。

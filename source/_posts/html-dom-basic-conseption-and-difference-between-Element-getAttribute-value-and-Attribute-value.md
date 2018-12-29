@@ -28,13 +28,13 @@ HTML DOM 的全称为: HTML Document Object Model, 意思是: 文档对象模型
 HTML DOM 定义了访问和操作 HTML 文档的标准方法。
 DOM 将 HTML 文档表达为树结构。
 
-![image_1as55s16qgogk1qpqvun3gj813.png-71.2kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173817.png)
+![image_1as55s16qgogk1qpqvun3gj813.png-71.2kB](/images/2018-05-29-173817.png)
 
 由上面我们可以知道, HTML DOM只是一种定义, 用来定义HTML文档的访问和操作的一种方法而已.
 那么图中的HTML DOM树, 就是用HTML DOM用来将HTML的结构定义成一种树状结构而已.
 
 在点开 http://www.w3school.com.cn/htmldom/dom_intro.asp 这个页面, 可以看到这么一段.
-![image_1as560dia1o9ccd51c6po751drq1g.png-22.6kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173818.png)
+![image_1as560dia1o9ccd51c6po751drq1g.png-22.6kB](/images/2018-05-29-173818.png)
 w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一个标准而已.
 
 
@@ -42,7 +42,7 @@ w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一
 由上面我们知道DOM是用来定义东西的.
 那么他是怎么定义的呢?
 打开 http://www.w3school.com.cn/htmldom/dom_nodes.asp , 看到下面的这个说明.
-![image_1as5644t41p5hc12ec61bpv1nai1t.png-39kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173820.png)
+![image_1as5644t41p5hc12ec61bpv1nai1t.png-39kB](/images/2018-05-29-173820.png)
 那么我们知道DOM是把HTML中的所有东西都定义成节点, 或者通俗点的说在DOM的世界里他认为**HTML文档中的所有东西都是节点**(理解一下这个加粗的文本).
 把节点分为以下5个类型.
 1. 整个文档是一个**文档节点**
@@ -63,7 +63,7 @@ w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一
 
 我们打开: http://www.w3school.com.cn/jsref/index.asp
 这个页面, 我们可以看到在左侧有个这一栏目.
-![image_1as57jhg911npb868dmj4mf182n.png-3.4kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173821.png)
+![image_1as57jhg911npb868dmj4mf182n.png-3.4kB](/images/2018-05-29-173821.png)
 下面4个子项. 可以看到: 
 
 **HTML DOM对象**一共包含:
@@ -72,10 +72,10 @@ w3c又说DOM是W3C的标准. 可见, DOM只是用来定义HTML的一种规范一
 3. **DOM Attribute对象**(属性对象)
 4. **DOM Event对象**(事件对象)
 
-![image_1as5ah07sphn8ol1r943ccmr534.png-17.2kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173822.png)
-![image_1as5ahdc71hs74ud1hnq9qc1ob53h.png-10kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173823.png)
-![image_1as5ahl871ibqdr1m421tqv1hmg3u.png-4.6kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173824.png)
-![image_1as5ahsdm1e1j113711qs1f32ae74b.png-7.7kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173825.png)
+![image_1as5ah07sphn8ol1r943ccmr534.png-17.2kB](/images/2018-05-29-173822.png)
+![image_1as5ahdc71hs74ud1hnq9qc1ob53h.png-10kB](/images/2018-05-29-173823.png)
+![image_1as5ahl871ibqdr1m421tqv1hmg3u.png-4.6kB](/images/2018-05-29-173824.png)
+![image_1as5ahsdm1e1j113711qs1f32ae74b.png-7.7kB](/images/2018-05-29-173825.png)
 
 上面4个图是w3c官方给的解释, 这几个对象也就是为HTML DOM的一种封装, 这样子就方便我们操作, 同时这些对象在JS里都是可以访问的.
 他们作用的就是将整个文档以及HTML元素封装成对象, 并对元素属性和事件也做封装, 让我们可以很方便的操作DOM.
@@ -119,11 +119,11 @@ Element对象调用getAttribute()方法方式: 123
 可以理解为你写代码时value值里写的值, 元素中的数据是不会变的. 
 我们可以通过审查元素来看看.
 如图所示, 我在输入**12312321321321**之后, 元素里的123并没有改变.
-![image_1as5brodmi731r5f1ptc6riv974o.png-35.2kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173826.png)
+![image_1as5brodmi731r5f1ptc6riv974o.png-35.2kB](/images/2018-05-29-173826.png)
 
 现在我们知道区别了. 但我想大家可能还有个疑惑的地方, 那就是大家可能还想要知道Attribute对象里面都可以访问哪些属性和方法.
 可以在 http://www.w3school.com.cn/jsref/dom_obj_attributes.asp 这里看到有以下这些属性.
-![image_1as5c00fs9isij1kfu1jkmi5755.png-30.5kB](http://p9i3bjj2h.bkt.clouddn.com/2018-05-29-173829.png)
+![image_1as5c00fs9isij1kfu1jkmi5755.png-30.5kB](/images/2018-05-29-173829.png)
 
 ```Javascript
 var input = document.getElementById("in");// 我们知道这个是拿到input这个HTML元素对象.
