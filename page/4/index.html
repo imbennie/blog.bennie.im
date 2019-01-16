@@ -307,6 +307,208 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://bennie.im/2016/07/07/Binary-Hexadecimal-Transform-To-Decimalism/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bennie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bennie's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/07/Binary-Hexadecimal-Transform-To-Decimalism/" itemprop="url">
+                  二进制十六进制转十进制基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-07T00:00:00+08:00">
+                2016-07-07
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-29T16:18:28+08:00">
+                2018-12-29
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/其它/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>文章只适用于新手朋友看. 大牛略过, 没有什么值得你学习的.</p>
+<blockquote>
+<p><strong>进位制</strong>是一种记数方式，亦称<strong>进位计数法</strong>或<strong>位值计数法</strong>。利用这种记数法，可以使用有限种数字符号来表示所有的数值。一种进位制中可以使用的数字符号的数目称为这种进位制的<strong>基数</strong>或<strong>底数</strong>。若一个进位制的基数为n，即可称之为n进位制，简称n进制。现在最常用的进位制是十进制，这种进位制通常使用10个阿拉伯数字（即0-9）进行记数。<br>我们可以用不同的进位制来表示同一个数。比如：十进数57(10)，可以用<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">二进制</a>表示为111001(2)，也可以用<a href="https://zh.wikipedia.org/wiki/%E4%BA%94%E9%80%B2%E4%BD%8D" target="_blank" rel="noopener">五进制</a>表示为212(5)，同时也可以用<a href="https://zh.wikipedia.org/wiki/%E5%85%AB%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">八进制</a>表示为71(8)、亦可用<a href="https://zh.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">十六进制</a>表示为39(16)，它们所代表的数值都是一样的。</p>
+<p>在10进制中有10个数字(0 - 9)，比如<img src="/images/2018-05-29-173808.png" alt=""></p>
+<p>在16进制中有16个数字(0–9 和 A–F)，比如<img src="/images/2018-05-29-173810.png" alt="">  (这里用字符B表示数字11)</p>
+<p>一般说来，b进制有b个数字，如果<img src="/images/2018-05-29-173811.png" alt=""> 是其中四个数字，那么就有</p>
+<p><img src="/images/2018-05-29-173812.png" alt=""> (注意， <img src="/images/2018-05-29-173813.png" alt=""> 表示一个数字序列, 而不是数字的相乘)</p>
+</blockquote>
+<p>引自<a href="https://zh.wikipedia.org/wiki/%E8%BF%9B%E4%BD%8D%E5%88%B6" target="_blank" rel="noopener">进位制 - 维基百科</a>, 上面其他进制的链接则链接到维基百科相关页面.<br><strong>在上面我们得知一个说明, 假设以10进制来计数, 那么进位制的基数就是10, 以2进制计数那么进位制的基数就是2, N位进位制的基数就是N.. 基数就是N</strong></p>
+<p>生活中我们常用的是10进制, 计算机里常用的是2进制, 8进制及16进制. 其中8进制相对来说使用较少. 编程中2进制及16进制相对频繁使用.<br>本文只对2,8,10,16进制进行说明.</p>
+<h2 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h2><p>十进制是我们最熟悉也最常用的一种, 阿拉伯数字数字正是以十进制为基础来进行计数.<br>这点本人就不多啰嗦了. 了解来源发展史相关的可以参考: <a href="https://zh.wikipedia.org/wiki/%E5%8D%81%E8%BF%9B%E5%88%B6" target="_blank" rel="noopener">十进制 - 维基百科</a></p>
+<p>那么我们所说的<strong>进位</strong>, 是如何进位的?<br>假设我们有个十进制的数字为: 521<br>那么可以拆分为 <code>521 = 5 * 100 + 2 * 10 + 1</code><strong>5是百位, 2是十位, 1是个位.</strong><br>那么: 百位10的2次方, 十位10的一次方, 个位则是10的0次方.<br>所以我们可以拆分为:<br>521 = <strong>5 * 10²</strong> + <strong>2 * 10¹</strong> + <strong>1 * 10º</strong></p>
+<p>像这样拆分为10的多少次方.以10递增就称为10进制.<br>同时我们也可以根据这个拆分结果发现一个规律.</p>
+<blockquote>
+</blockquote>
+<p>521是3位数, 最高位是百位, 是10的2次方(10²).<br>那么5211是4位数, 那么最高位是千位, 是10的三次方(10³).</p>
+<blockquote>
+</blockquote>
+<p>由此我们可以得出一个<strong>N位长</strong>的10进制数字, 他的最高位是10的N-1次方(10ⁿ﹣¹), 然后10的n-2, n-3等等一直, 到个位的10减0次方.这里的10就称为基数.<br>理解了这个, 下面讲的2进制, 16进制也就容易理解了.</p>
+<p>进位: 当个位达到超过的数值9时, 不用10来表示而在十位上用1来表示. 然后11 12 13 … 19 20.  当超过19时十位的1就开始变成2, 同时个位变成0. 通过分析可以看出进位是从个位开始影响后面的十位百位等其他位.</p>
+<h2 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h2><p>上面我们分析了10进制拆分的过程.并发现了一个规律:<br>那就是一个用10进制表示的<strong>N位</strong>数字等于<strong>基数的N-1次方</strong></p>
+<p>那么二进制也如此, 二进制只用1和0进行表示.<br>这里引用维基百科上面对二进制的一个例子:</p>
+<blockquote>
+</blockquote>
+<p>0 0 0 1 数值为2º<br>0 0 1 0 数值为2¹<br>0 1 0 0 数值为2²<br>1 0 0 0 数值为2³</p>
+<p>上面列举了4个二进制数字, 1分别从0位一直3位.<br>通过观察我们一样可以发现,<br>第一个数字<strong>0 0 0 1 数值为2º</strong>, 1是在最低位, 也就是2的0次方.<br>第二个数字<strong>0 0 1 0 数值为2¹</strong>, 1是在第1位, 也就是2的1次方.<br>一直到最后的1到了最高是<strong>2的3次方.</strong> 这和我们上面说的10进制的拆分是一样的.</p>
+<p>所以说假设我们有个<strong>1110</strong>这样的一个4位的2进制数字.<br>那么计算是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1110 = (1 * 2³) + (1 * 2²) + (1 * 2¹) + (0 * 2º)</span><br><span class="line">     =    8     +    4     +    2     +    0</span><br><span class="line">     = 14</span><br></pre></td></tr></table></figure></p>
+<p>上面是2进制推算为10进制的数字, 那么下面再说下10进制推算回2进制的数字.<br>就拿<strong>21</strong>这个数字来说, 可以用除以2的方式来反推, </p>
+<p>我们可以来写一个公式.<br><img src="/images/2018-05-29-173814.png" alt="1.png-16.8kB"><br>图片中的每个直角符号里的数, 除了最上面的21不算,  其后的每一个是上一次除以2后得出的商, 然后用它充当被除数继续去除以2. <strong>如果能整除, 则记为0, 不能整除记为1.</strong> 由此我们就可以推导出对应的二进制. (<strong>注意</strong>: 二进制数字的排序是从最下面往上面)</p>
+<hr>
+<p>下面是在网上找的一个156换算成2进制的步骤图, 供同时参考.<br><img src="/images/2018-05-29-173816.png" alt="image_1arvrclmc12pq1ljp1alpb3v1sa1d.png-281.3kB"><br>另外: 我们会发现如果十进制数字是一个偶数, 那么2进制的最低位就0, 十进制是奇数, 2进制的最低位则是1(因为奇数不能整除).</p>
+<p>二进制中的每一个数字称为一个位或者说一个比特(bit).<br>我们知道1个字节等于8个比特.就是指: 1byte = 8bit.<br>所以说如果<strong>1111 0000</strong> 这样一个8位数的二进制数字, 刚好是一个1字节.<br>我们在编程中用的那些位移运算符可以用来对这些每个位进行操作.</p>
+<h2 id="十六进制"><a href="#十六进制" class="headerlink" title="十六进制"></a>十六进制</h2><p>上面说了2进制, 差不多大家都理解了. 现在再说一下十六进制.<br>十进制是用0-9表示, 二进制是用1和0.<br>十六进制则是用0-9A-F来表示, 一共是 0123456789ABCDEF, A代表数字10, B代表11, 一直到F代表15. 加起来一共16个数字.<br>根据上面的运算我们现在可以知道, 推算就是用: <strong>N位上的数字</strong>乘以<strong>N进制</strong>的<strong>N位-1次方</strong>来计算出那个位上的数字是十进制对应的什么数字.<br>例如一个十六进制的数位: F4, 我们可以这么计算.</p>
+<ol>
+<li>先确定这个数字的长度, F4长度2. 那么F是第(长度-1)位, 4就是第(长度-2)位.</li>
+<li>上面计算得出F是第1位, 4是第0位. </li>
+<li>那么F就是: 15乘以16的一次方. 得出: <strong>15 * 16¹ = 240</strong></li>
+<li>那么4就是: 15乘以16的零次方. 得出: <strong>4 * 16º = 4</strong></li>
+<li>那么最终结果就是: 十六进制的F4对应的十进制数字为 240 + 4 = 244;</li>
+</ol>
+<p>那么十进制转到十六进制, 可以用这样的方式.</p>
+<blockquote>
+</blockquote>
+<p>引用一个: <a href="http://wenku.baidu.com/link?url=j_DtHJRTDIF4cHiOKrYxWLB6Y6XKNFs34F6m7eVHJniB9xB54LyGnVZrmS6GO9Q2ddUO7TcLtaOTUZzA--UESR3tSHN3cY09L7UOOWfXeZm" target="_blank" rel="noopener">十进制数与十六进制数的转换方法</a> 来说明十进制转换到十六进制. 该链接里也说明了2,8,16这三个进制的相互转换</p>
+<blockquote>
+</blockquote>
+<p>若十进制数23785转为十六进制，则用23785 / 16 = 1486 余9, 1486 / 16 = 92 余14, 92 / 16 = 5 余12, 5 / 16 = 0 余5，十六进制中，10对应为a、11对应为b、。。。。。。、15对应为f，再将余数倒写为5ce9, 则十进制23785=十六进制5ce9</p>
+<p>值的说明的一个地方是当二进制和十六进制进行转换的时候, 二进制中的4个位代表一个十六进制.如果不够4个位那就前面补上对应数量的0.<br>例如一个二进制数为: 11111010 那么可以分为1111 1010, 1111代表十六进制F, 1010代表十六进制A. 所以二进制11111010就是十六进制FA.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://bennie.im/2016/07/01/linux-cp-directive-commonly-parameter-explain-and-examples/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1823,7 +2025,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1834,7 +2036,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1845,7 +2047,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1941,7 +2143,7 @@
           <div class="copyright" >
     
     &copy;  2016 - 
-    <span itemprop="copyrightYear">2018</span>
+    <span itemprop="copyrightYear">2019</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
