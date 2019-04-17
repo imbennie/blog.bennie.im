@@ -71,7 +71,7 @@ theme: next
 deploy:
 - type: git
   repo: 
-    github: github_bennie:imbennie/bennie.im.git
+    github: github:imbennie/bennie.im.git
 
 # coding: coding_bennie:im_bennie/bennie.im.git
     

@@ -9,6 +9,9 @@ categories:
 ---
 
 
+
+
+
 [TOC]
 
 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。
@@ -20,6 +23,9 @@ categories:
 #### 查看/设置远程仓库
 
 - 查看远程分支引用列表：`git ls-remote`
+    >  54f42552f530fe64acdf71e68c5de3b8ac1b9184	HEAD
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/for/master    
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/heads/master
 - 查看本地仓库已经配置的远程仓库信息：`git remote -v`
 - 查看远程仓库详细信息：`git remote show [remote-name]`
 - 添加远程仓库：`git remote add <remote-name> <url>`添加远程仓库URL，并设置一个简写的远程仓库名称，这个名称代替整个URL。这里的remote-name可以任意命名，默认clone过来的仓库，remote-name为origin。
@@ -71,11 +77,13 @@ git reset命令有3种形式.
    - `--hard` 在移动HEAD指针后, 会将暂存区及工作区都重置为对应提交记录的状态上去. (撤销`git commit` 、`git add`以及工作区所有的修改)
 
 
-   **关于git reset [--soft | --mixed | --hard] 命令操作过程:**
+
+**关于git reset [--soft | --mixed | --hard] 命令操作过程:**
    首先git reset命令的三个选项都会将当前分支的HEAD指针进行移动. 
-   > `--soft` 仅仅是移动指针，不会对暂存区和工作区做修改，重置后，工作区和index中依旧是之前的文件状态。
-   > `--mixed`移动HEAD指针后，再将对应HEAD指向的提交记录中的文件拷贝至index中，所以此时index与HEAD中文件内容一致。可以通过命令`git diff --cached <path>`查看一下index与HEAD中的文件差异。这时候，工作区和index中的差异就是相对于HEAD中的差异，可以通过命令`git diff <commit> <path>`查看一下。
-   > `--hard`则在移动HEAD指针后先将HEAD中对应的内容复制到index中, 同时还会将index的内容复制给工作区.
+
+   - `--soft` 仅仅是移动指针，不会对暂存区和工作区做修改，重置后，工作区和index中依旧是之前的文件状态。
+   - `--mixed`移动HEAD指针后，再将对应HEAD指向的提交记录中的文件拷贝至index中，所以此时index与HEAD中文件内容一致。可以通过命令`git diff --cached <path>`查看一下index与HEAD中的文件差异。这时候，工作区和index中的差异就是相对于HEAD中的差异，可以通过命令`git diff <commit> <path>`查看一下。
+   - `--hard`则在移动HEAD指针后先将HEAD中对应的内容复制到index中, 同时还会将index的内容复制给工作区.
 
    https://www.git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86
 
@@ -102,7 +110,8 @@ git reset命令有3种形式.
 - 删除tag：`git tag -d <tag-name>`
 - 推送tag到远程：`git push origin <tag-name>` / 推送本地所有tag：`git push --tags`
 - 删除远程tag：`git push origin :refs/tags/<tag-name>`（将远程tag引用至空）
-- 
+
+
 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013762144381812a168659b3dd4610b4229d81de5056cc000
 
 
@@ -195,7 +204,10 @@ https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b
 | `%cr` | 提交日期，按多久以前的方式显示 |
 | `%s` | 提交说明 |
 
+
+
 ----
+
 
 **git log常用命令选项**
 
@@ -277,6 +289,10 @@ index 1191247..01e79c3 100644
 2
 +3   
 ```
+
+
+
+
 
 
 
