@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="Bennie&#39;s Blog">
 <meta property="og:description" content="本文是给自己留个笔记，是建立在本人自己的思路上，所以有些地方不会说的那么详细如果只是来找直接的解决方案，可以参考《本地有多个github账号如何使用hexo部署到特定账号》这篇文章。 这里只针对Hexo部署时在多个SSH配置时一些处理，关于多个Github账号的搭配多个SSH配置的问题请自行谷歌了解。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-29T08:13:04.833Z">
+<meta property="og:updated_time" content="2019-07-28T03:55:15.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多个SSH连接配置之HEXO部署">
 <meta name="twitter:description" content="本文是给自己留个笔记，是建立在本人自己的思路上，所以有些地方不会说的那么详细如果只是来找直接的解决方案，可以参考《本地有多个github账号如何使用hexo部署到特定账号》这篇文章。 这里只针对Hexo部署时在多个SSH配置时一些处理，关于多个Github账号的搭配多个SSH配置的问题请自行谷歌了解。">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-29T16:13:04+08:00">
-                2018-12-29
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-28T11:55:15+08:00">
+                2019-07-28
               </time>
             
           </span>
@@ -417,29 +417,29 @@
 <p><code>这里只针对Hexo部署时在多个SSH配置时一些处理，关于多个Github账号的搭配多个SSH配置的问题请自行谷歌了解。</code></p>
 <a id="more"></a>
 <hr>
-<p>多个SSH配置是指的是在用户家目录下.ssh\config文件中(<code>C:\Users\joey\.ssh\config</code>)文件中配置了多个SSH的连接。<br>之前在《<a href="/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/">如何使用SSH配置文件进行SSH连接</a>》已经介绍了多个SSH配置的配置方法。</p>
+<p>多个SSH配置是指的是在用户家目录下.ssh\config文件中(<code>C:\Users\good_boy\.ssh\config</code>)文件中配置了多个SSH的连接。<br>之前在《<a href="/2017/06/14/how-to-use-ssh-config-file-for-a-ssh-connection/">如何使用SSH配置文件进行SSH连接</a>》已经介绍了多个SSH配置的配置方法。</p>
 <p>但当我们这样子配置之后，会发现在Hexo部署的时候会出现错误。因为Hexo在提交到仓库的时候不知道使用哪个SSH配置。<br>我们要解决的问题让仓库地址跟我们的SSH配置中的Host主机对应上，这样子他就会去找对应的SSH配置了。<br>听起来可能不太明白，其实很简单。</p>
 <p>例如现在我的电脑上有两个Github账号，然后SSH配置文件的连接配置为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host github_1</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/joey/.ssh/keys/github_1</span><br><span class="line"></span><br><span class="line">Host github_2</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/joey/.ssh/keys/github_2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host github_1</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/good_boy/.ssh/keys/github_1</span><br><span class="line"></span><br><span class="line">Host github_2</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/good_boy/.ssh/keys/github_2</span><br></pre></td></tr></table></figure>
 <p>配置了多个SSH链接，这时候我们如果还是以git作为github.com这个主机的User去连接那么就会失败。</p>
 <blockquote>
 <p>$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><br>Permission denied (publickey).</p>
 </blockquote>
 <p>这是因为不能确定具体要去使用哪个配置文件。这时候我们就需要指定具体的Host了，也就是你得通过<code>ssh github_1</code>这样子的方式来连接。</p>
 <blockquote>
-<p>$ ssh -T github_1<br>Hi joey! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>$ ssh -T github_1<br>Hi good_boy! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 </blockquote>
-<p>我们的Hexo配置文件_config.yml中Deploy部分的配置正常配置是这么配置的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:joey/joey.github.io.git</span><br></pre></td></tr></table></figure>
-<p>部署仓库的地址中有<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a><code>这么一段，这就是SSH连接的用户名和主机。这样部署，当Hexo进行ssh通讯的时候就相当于</code>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>`，所以是会导致连接失败的。</p>
-<p>解决方法就是把仓库SSH地址：<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:joey/joey.github.io.git<code>中的</code><a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><code>替换成对应的SSH配置的主机，冒号后面的就是Github的用户名，这个不需要改。
+<p>一般情况下，我们的Hexo配置文件_config.yml中Deploy部分配置如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">- type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line"><span class="attr">    github:</span> <span class="string">git@github.com:good_boy/good_boy.github.io.git</span></span><br></pre></td></tr></table></figure>
+<p>部署仓库的地址中有 <a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a><code>这么一段，这就是SSH连接的用户名和主机。这样部署，当Hexo进行ssh通讯的时候就相当于</code>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>` ，所以是会导致连接失败的。</p>
+<p>解决方法就是把仓库SSH地址：<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:good_boy/good_boy.github.io.git<code>中的</code><a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><code>替换成对应的SSH配置的主机，冒号后面的就是Github的用户名，这个不需要改。
 例如这里HEXO部署到的Github账号需要使用github_1这个SSH配置来进行SSH连接验证。
-那么部署的仓库地址就需要写成：</code>repo: github_1:joey/joey.github.io.git`<br>这样子Hexo在部署进行SSH连接的时候就会知道使用哪个SSH配置了。</p>
+那么部署的仓库地址就需要写成：</code>repo: github_1:good_boy/good_boy.github.io.git`<br>这样子Hexo在部署进行SSH连接的时候就会知道使用哪个SSH配置了。</p>
 <p>这样的做法也适用于部署到多个Git仓库，例如同时部署到了Github和Coding上，那么SSH连接配置和Hexo的配置就是下面这样子：</p>
 <p><strong>SSH连接配置</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host coding_joey</span><br><span class="line">    User git</span><br><span class="line">    HostName git.coding.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/joey/.ssh/keys/coding_joey</span><br><span class="line"></span><br><span class="line">Host github_joey</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/joey/.ssh/keys/github_joey</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host coding_good_boy</span><br><span class="line">    User git</span><br><span class="line">    HostName git.coding.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/good_boy/.ssh/keys/coding_good_boy</span><br><span class="line"></span><br><span class="line">Host github_good_boy</span><br><span class="line">    User git</span><br><span class="line">    HostName github.com</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile C:/Users/good_boy/.ssh/keys/github_good_boy</span><br></pre></td></tr></table></figure>
 <p><strong>Hexo部署配置</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: </span><br><span class="line">    coding: coding_joey:joey/joey.coding.me.git</span><br><span class="line">    github: github_joey:joey/joey.github.io.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">- type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line"><span class="attr">    coding:</span> <span class="attr">coding_good_boy:good_boy/good_boy.coding.me.git</span></span><br><span class="line"><span class="attr">    github:</span> <span class="attr">github_good_boy:good_boy/good_boy.github.io.git</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
