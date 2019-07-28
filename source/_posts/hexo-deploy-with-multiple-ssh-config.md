@@ -29,7 +29,7 @@ categories:
 
 例如现在我的电脑上有两个Github账号，然后SSH配置文件的连接配置为：
 
-```
+```yml
 Host github_1
     User git
     HostName github.com
@@ -66,7 +66,14 @@ deploy:
     github: git@github.com:good_boy/good_boy.github.io.git
 ```
 
-部署仓库的地址中有 `git@github.com` 这么一段，这就是SSH连接的用户名和主机。这样部署，当Hexo进行ssh通讯的时候就相当于 `ssh -T git@github.com` ，所以是会导致连接失败的。
+---
+
+
+
+部署仓库的地址中有 git@github.com 这么一段，这就是SSH连接的用户名和主机。
+这样部署，当进行ssh通讯的时候就相当于 `ssh -T git@github.com` ，所以是会导致连接失败的。
+
+
 
 解决方法就是把仓库SSH地址：`git@github.com:good_boy/good_boy.github.io.git` 中的 `git@github.com` 替换成对应的SSH配置的主机，冒号后面的就是Github的用户名，这个不需要改。
 例如这里HEXO部署到的Github账号需要使用github_1这个SSH配置来进行SSH连接验证。
@@ -77,7 +84,7 @@ deploy:
 
 **SSH连接配置**
 
-```properties
+```yml
 Host coding_good_boy
     User git
     HostName git.coding.net
@@ -90,6 +97,7 @@ Host github_good_boy
     PreferredAuthentications publickey
     IdentityFile C:/Users/good_boy/.ssh/keys/github_good_boy
 ```
+
 **Hexo部署配置**
 
 ```yml
