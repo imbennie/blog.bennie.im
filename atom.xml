@@ -292,9 +292,9 @@
       <category term="Hexo" scheme="http://bennie.im/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://bennie.im/tags/Hexo/"/>
-    
       <category term="SSH" scheme="http://bennie.im/tags/SSH/"/>
+    
+      <category term="Hexo" scheme="http://bennie.im/tags/Hexo/"/>
     
       <category term="SSHConfig" scheme="http://bennie.im/tags/SSHConfig/"/>
     
