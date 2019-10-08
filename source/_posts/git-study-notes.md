@@ -9,26 +9,45 @@ categories:
 ---
 
 
-
-
-
 [TOC]
 
 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。
 
 <!-- more -->
 
+### FAQ
+#### 快速合并和非快速合并的区别
+理解概念：https://blog.csdn.net/andyzhaojianhui/article/details/78072143
+理解区别：https://blog.csdn.net/zombres/article/details/82179122
+
 ### Git远程操作
 
 #### 查看/设置远程仓库
 
 - 查看远程分支引用列表：`git ls-remote`
-    >  54f42552f530fe64acdf71e68c5de3b8ac1b9184	HEAD
-    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/for/master    
-    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/heads/master
+    >  54f42552f530fe64acdf71e68c5de3b8ac1b9184 HEAD
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/for/master    
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/heads/master
 - 查看本地仓库已经配置的远程仓库信息：`git remote -v`
 - 查看远程仓库详细信息：`git remote show [remote-name]`
-- 添加远程仓库：`git remote add <remote-name> <url>`添加远程仓库URL，并设置一个简写的远程仓库名称，这个名称代替整个URL。这里的remote-name可以任意命名，默认clone过来的仓库，remote-name为origin。
+- 添加远程仓库：`git remote add <remote-name> <url>`添加远程仓库URL，并设置一个简写的远程仓库名称，这个名称代替整个URL。这里的remote-name可以任意命名，通过`git clone`命令下来的仓库，其remote-name为origin。
+- 修改远程仓库URL：`git remote set-url [remote-name] [url]`
+
+
+`git remote`命令手册：
+>    git remote [-v | --verbose]
+       git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
+       git remote rename <old> <new>
+       git remote remove <name>
+       git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+       git remote set-branches [--add] <name> <branch>...
+       git remote get-url [--push] [--all] <name>
+       git remote set-url [--push] <name> <newurl> [<oldurl>]
+       git remote set-url --add [--push] <name> <newurl>
+       git remote set-url --delete [--push] <name> <url>
+       git remote [-v | --verbose] show [-n] <name>...
+       git remote prune [-n | --dry-run] <name>...
+       git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
 
 #### 拉取远程仓库信息
 
@@ -77,10 +96,8 @@ git reset命令有3种形式.
    - `--hard` 在移动HEAD指针后, 会将暂存区及工作区都重置为对应提交记录的状态上去. (撤销`git commit` 、`git add`以及工作区所有的修改)
 
 
-
 **关于git reset [--soft | --mixed | --hard] 命令操作过程:**
    首先git reset命令的三个选项都会将当前分支的HEAD指针进行移动. 
-
    - `--soft` 仅仅是移动指针，不会对暂存区和工作区做修改，重置后，工作区和index中依旧是之前的文件状态。
    - `--mixed`移动HEAD指针后，再将对应HEAD指向的提交记录中的文件拷贝至index中，所以此时index与HEAD中文件内容一致。可以通过命令`git diff --cached <path>`查看一下index与HEAD中的文件差异。这时候，工作区和index中的差异就是相对于HEAD中的差异，可以通过命令`git diff <commit> <path>`查看一下。
    - `--hard`则在移动HEAD指针后先将HEAD中对应的内容复制到index中, 同时还会将index的内容复制给工作区.
@@ -289,8 +306,6 @@ index 1191247..01e79c3 100644
 2
 +3   
 ```
-
-
 
 
 
