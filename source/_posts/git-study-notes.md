@@ -9,7 +9,6 @@ categories:
 ---
 
 
-[TOC]
 
 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。
 
@@ -25,9 +24,9 @@ categories:
 #### 查看/设置远程仓库
 
 - 查看远程分支引用列表：`git ls-remote`
-    >  54f42552f530fe64acdf71e68c5de3b8ac1b9184 HEAD
-    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/for/master    
-    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/heads/master
+    >  54f42552f530fe64acdf71e68c5de3b8ac1b9184	HEAD
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/for/master    
+    > 54f42552f530fe64acdf71e68c5de3b8ac1b9184	refs/heads/master
 - 查看本地仓库已经配置的远程仓库信息：`git remote -v`
 - 查看远程仓库详细信息：`git remote show [remote-name]`
 - 添加远程仓库：`git remote add <remote-name> <url>`添加远程仓库URL，并设置一个简写的远程仓库名称，这个名称代替整个URL。这里的remote-name可以任意命名，通过`git clone`命令下来的仓库，其remote-name为origin。
@@ -181,6 +180,18 @@ https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b
 
 #### 远程分支操作
 
+##### Git查看、删除、重命名远程分支和tag
+https://blog.zengrong.net/post/delete_git_remote_brahch/
+
+##### 删除远程分支
+
+第一种：
+ `git push origin --delete <branch_name>`
+
+第二种：
+git branch -r -d origin/<branch_name>
+git push origin :<branch_name>
+
 ##### 设置本地分支的远程跟踪分支
 
 设置后可以直接在当前分支上使用`git pull`、`git push`。
@@ -306,7 +317,6 @@ index 1191247..01e79c3 100644
 2
 +3   
 ```
-
 
 
 
