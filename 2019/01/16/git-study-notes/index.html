@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="[TOC] 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
+<meta name="description" content="记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习随笔">
 <meta property="og:url" content="http://bennie.im/2019/01/16/git-study-notes/index.html">
 <meta property="og:site_name" content="Bennie&#39;s Blog">
-<meta property="og:description" content="[TOC] 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
+<meta property="og:description" content="记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-08T02:20:52.447Z">
+<meta property="og:updated_time" content="2019-11-19T03:11:54.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习随笔">
-<meta name="twitter:description" content="[TOC] 记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
+<meta name="twitter:description" content="记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。">
 
 
 
@@ -312,7 +312,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bennie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="image" content="/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-10-08T10:20:52+08:00">
-                2019-10-08
+              <time title="更新于" itemprop="dateModified" datetime="2019-11-19T11:11:54+08:00">
+                2019-11-19
               </time>
             
           </span>
@@ -413,13 +413,12 @@
       
 
       
-        <p>[TOC]</p>
-<p>记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。</p>
+        <p>记一些Git学习时的笔记供之后参考，可以从博客右侧的导航栏进行便捷浏览。</p>
 <a id="more"></a>
 <h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><h4 id="快速合并和非快速合并的区别"><a href="#快速合并和非快速合并的区别" class="headerlink" title="快速合并和非快速合并的区别"></a>快速合并和非快速合并的区别</h4><p>理解概念：<a href="https://blog.csdn.net/andyzhaojianhui/article/details/78072143" target="_blank" rel="noopener">https://blog.csdn.net/andyzhaojianhui/article/details/78072143</a><br>理解区别：<a href="https://blog.csdn.net/zombres/article/details/82179122" target="_blank" rel="noopener">https://blog.csdn.net/zombres/article/details/82179122</a></p>
 <h3 id="Git远程操作"><a href="#Git远程操作" class="headerlink" title="Git远程操作"></a>Git远程操作</h3><h4 id="查看-设置远程仓库"><a href="#查看-设置远程仓库" class="headerlink" title="查看/设置远程仓库"></a>查看/设置远程仓库</h4><ul>
 <li>查看远程分支引用列表：<code>git ls-remote</code><blockquote>
-<p> 54f42552f530fe64acdf71e68c5de3b8ac1b9184 HEAD<br>54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/for/master<br>54f42552f530fe64acdf71e68c5de3b8ac1b9184  refs/heads/master</p>
+<p> 54f42552f530fe64acdf71e68c5de3b8ac1b9184    HEAD<br>54f42552f530fe64acdf71e68c5de3b8ac1b9184    refs/for/master<br>54f42552f530fe64acdf71e68c5de3b8ac1b9184    refs/heads/master</p>
 </blockquote>
 </li>
 <li>查看本地仓库已经配置的远程仓库信息：<code>git remote -v</code></li>
@@ -507,7 +506,10 @@
 <li>分支可以从一个<strong>commit</strong>、<strong>tag</strong>、<strong>其他分支</strong>上进行基础。</li>
 <li>创建分支，只是相当于从commit对象上建立了一个指针，然后让其内部的HEAD指针指向这个分支，就会知道当前工作区处于哪个分支上（可以将 HEAD 想象为当前分支的别名）。</li>
 </ol>
-<h4 id="远程分支操作"><a href="#远程分支操作" class="headerlink" title="远程分支操作"></a>远程分支操作</h4><h5 id="设置本地分支的远程跟踪分支"><a href="#设置本地分支的远程跟踪分支" class="headerlink" title="设置本地分支的远程跟踪分支"></a>设置本地分支的远程跟踪分支</h5><p>设置后可以直接在当前分支上使用<code>git pull</code>、<code>git push</code>。</p>
+<h4 id="远程分支操作"><a href="#远程分支操作" class="headerlink" title="远程分支操作"></a>远程分支操作</h4><h5 id="Git查看、删除、重命名远程分支和tag"><a href="#Git查看、删除、重命名远程分支和tag" class="headerlink" title="Git查看、删除、重命名远程分支和tag"></a>Git查看、删除、重命名远程分支和tag</h5><p><a href="https://blog.zengrong.net/post/delete_git_remote_brahch/" target="_blank" rel="noopener">https://blog.zengrong.net/post/delete_git_remote_brahch/</a></p>
+<h5 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h5><p>第一种：<br> <code>git push origin --delete &lt;branch_name&gt;</code></p>
+<p>第二种：<br>git branch -r -d origin/&lt;branch_name&gt;<br>git push origin :&lt;branch_name&gt;</p>
+<h5 id="设置本地分支的远程跟踪分支"><a href="#设置本地分支的远程跟踪分支" class="headerlink" title="设置本地分支的远程跟踪分支"></a>设置本地分支的远程跟踪分支</h5><p>设置后可以直接在当前分支上使用<code>git pull</code>、<code>git push</code>。</p>
 <ol>
 <li>从远程分支检出本地分支（会自动设置远程分支为跟踪分支），见：<a href="#检出分支">检出分支</a></li>
 <li>修改或者本地分支的远程跟踪分支：<code>git branch -u/--set-upstream-to origin/远程分支名x</code><br><code>git branch (--set-upstream-to=&lt;upstream&gt; | -u &lt;upstream&gt;) [&lt;branchname&gt;]</code></li>
@@ -808,7 +810,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/avatar.png"
+               src="/avatar.jpeg"
                alt="Bennie" />
           <p class="site-author-name" itemprop="name">Bennie</p>
            
@@ -931,7 +933,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">1.</span> <span class="nav-text">FAQ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速合并和非快速合并的区别"><span class="nav-number">1.1.</span> <span class="nav-text">快速合并和非快速合并的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git远程操作"><span class="nav-number">2.</span> <span class="nav-text">Git远程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看-设置远程仓库"><span class="nav-number">2.1.</span> <span class="nav-text">查看/设置远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拉取远程仓库信息"><span class="nav-number">2.2.</span> <span class="nav-text">拉取远程仓库信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git常用撤销操作"><span class="nav-number">3.</span> <span class="nav-text">Git常用撤销操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git重置"><span class="nav-number">4.</span> <span class="nav-text">Git重置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-命令"><span class="nav-number">4.1.</span> <span class="nav-text">git reset 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git检出"><span class="nav-number">5.</span> <span class="nav-text">Git检出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检出分支"><span class="nav-number">5.1.</span> <span class="nav-text">检出分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销对未暂存文件的修改"><span class="nav-number">5.2.</span> <span class="nav-text">撤销对未暂存文件的修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Tag-操作"><span class="nav-number">6.</span> <span class="nav-text">Git Tag 操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git配置"><span class="nav-number">7.</span> <span class="nav-text">Git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git分支操作"><span class="nav-number">8.</span> <span class="nav-text">Git分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检出分支-1"><span class="nav-number">8.1.</span> <span class="nav-text">检出分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程分支操作"><span class="nav-number">8.2.</span> <span class="nav-text">远程分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#设置本地分支的远程跟踪分支"><span class="nav-number">8.2.1.</span> <span class="nav-text">设置本地分支的远程跟踪分支</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git信息查看"><span class="nav-number">9.</span> <span class="nav-text">Git信息查看</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看历史提交信息"><span class="nav-number">9.1.</span> <span class="nav-text">查看历史提交信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git-log命令"><span class="nav-number">9.1.1.</span> <span class="nav-text">Git log命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看对象库信息"><span class="nav-number">9.2.</span> <span class="nav-text">查看对象库信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令使用"><span class="nav-number">10.</span> <span class="nav-text">命令使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层命令"><span class="nav-number">10.1.</span> <span class="nav-text">底层命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-rm命令"><span class="nav-number">10.2.</span> <span class="nav-text">git rm命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-diff-命令"><span class="nav-number">10.3.</span> <span class="nav-text">git diff 命令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">1.</span> <span class="nav-text">FAQ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速合并和非快速合并的区别"><span class="nav-number">1.1.</span> <span class="nav-text">快速合并和非快速合并的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git远程操作"><span class="nav-number">2.</span> <span class="nav-text">Git远程操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看-设置远程仓库"><span class="nav-number">2.1.</span> <span class="nav-text">查看/设置远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拉取远程仓库信息"><span class="nav-number">2.2.</span> <span class="nav-text">拉取远程仓库信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git常用撤销操作"><span class="nav-number">3.</span> <span class="nav-text">Git常用撤销操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git重置"><span class="nav-number">4.</span> <span class="nav-text">Git重置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-reset-命令"><span class="nav-number">4.1.</span> <span class="nav-text">git reset 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git检出"><span class="nav-number">5.</span> <span class="nav-text">Git检出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检出分支"><span class="nav-number">5.1.</span> <span class="nav-text">检出分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销对未暂存文件的修改"><span class="nav-number">5.2.</span> <span class="nav-text">撤销对未暂存文件的修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-Tag-操作"><span class="nav-number">6.</span> <span class="nav-text">Git Tag 操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git配置"><span class="nav-number">7.</span> <span class="nav-text">Git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git分支操作"><span class="nav-number">8.</span> <span class="nav-text">Git分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检出分支-1"><span class="nav-number">8.1.</span> <span class="nav-text">检出分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程分支操作"><span class="nav-number">8.2.</span> <span class="nav-text">远程分支操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git查看、删除、重命名远程分支和tag"><span class="nav-number">8.2.1.</span> <span class="nav-text">Git查看、删除、重命名远程分支和tag</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除远程分支"><span class="nav-number">8.2.2.</span> <span class="nav-text">删除远程分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置本地分支的远程跟踪分支"><span class="nav-number">8.2.3.</span> <span class="nav-text">设置本地分支的远程跟踪分支</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git信息查看"><span class="nav-number">9.</span> <span class="nav-text">Git信息查看</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看历史提交信息"><span class="nav-number">9.1.</span> <span class="nav-text">查看历史提交信息</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Git-log命令"><span class="nav-number">9.1.1.</span> <span class="nav-text">Git log命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看对象库信息"><span class="nav-number">9.2.</span> <span class="nav-text">查看对象库信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令使用"><span class="nav-number">10.</span> <span class="nav-text">命令使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#底层命令"><span class="nav-number">10.1.</span> <span class="nav-text">底层命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-rm命令"><span class="nav-number">10.2.</span> <span class="nav-text">git rm命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-diff-命令"><span class="nav-number">10.3.</span> <span class="nav-text">git diff 命令</span></a></li></ol></li></ol></div>
             
 
           </div>
