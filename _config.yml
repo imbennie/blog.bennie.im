@@ -108,3 +108,10 @@ deploy:
 - type: git
   repo: github:imbennie/bennie.im.git
   branch: main
+
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
