@@ -256,7 +256,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (nonsupport animation).
@@ -352,7 +352,7 @@ theme_color:
 # Override browsers' default behavior.
 body_scrollbar:
   # Place the scrollbar over the content.
-  overlay: false
+  overlay: true
   # Present the scrollbar even if the content is not overflowing.
   stable: false
 
@@ -380,7 +380,7 @@ back2top:
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: left | right
   start_at: left
   # Available values: top | bottom
@@ -583,9 +583,9 @@ comments:
 # Disqus
 # For more information: https://disqus.com
 disqus:
-  enable: false
-  shortname:
-  count: true
+  enable: true
+  shortname: imbennie
+  count: false
 
 # DisqusJS
 # For more information: https://disqusjs.skk.moe
