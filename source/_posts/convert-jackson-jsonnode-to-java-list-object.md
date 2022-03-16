@@ -7,9 +7,11 @@ categories:
     - Java
 ---
 
-
+Jackson用的不多，这里先记一下。
 
 https://stackoverflow.com/questions/48287292/how-do-you-convert-a-jackson-jsonnode-to-a-list-of-some-user-defined-object
+
+<!-- more -->
 
 ```json
 {

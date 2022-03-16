@@ -30,7 +30,7 @@ http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html
 https://zh.wikipedia.org/wiki/JSONP
 
 ## 跨域请求是什么?
-嗯, 跨域请求简单的来说就是指:
+跨域请求简单的来说就是指:
 服务器网页A在请求B服务器网页上的资源数据时, 那么当协议, 域名, 端口号三者其一有不同时, 那么就会出现跨域请求的问题.浏览器会检查服务器B的HTTP头(HEAD请求)，如果Access-Control-Allow-Origin中有A，或者是通配符*，浏览器就会允许跨域。
 例如:
 >a.baidu.com访问b.baidu.com  是跨域
