@@ -4,9 +4,8 @@ date: 2018-06-02 18:15:47
 tags: 
 	- Java
 	- Mybatis
-
 categories: 
-	- Java
+	- 编程开发
 
 
 ---

@@ -1,11 +1,10 @@
 title: 谷歌验证码jar包Kaptcha的使用和运行过程
 date: 2017-04-17 23:25:36
-tags:
-  - Java
-  - 验证码Jar包
 
+tags:
+	- Java
 categories:
-  - Java
+	- 编程开发
 
 ---
 

@@ -1,7 +1,6 @@
 title: Linux创建指定文件，文件夹，网页url地址快捷方式
 date: 2016-01-07 00:19:23
 tags:
-	- Linux命令
 	- Linux
 categories:
 	- Linux

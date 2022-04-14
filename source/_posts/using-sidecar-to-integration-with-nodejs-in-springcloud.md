@@ -3,10 +3,10 @@ title: 使用Sidecar将Node.js引入Spring Cloud
 date: 2017-09-11 17:51:36
 tags:
 	- Spring Cloud
-	- Sidecar
+	- Java
 	- 微服务
 categories:
-	- 微服务	
+	- 编程开发
 ---
 
 网上看到的一篇文章，觉得写得挺好，现转载于此，以方便需要的网友查阅。

@@ -1,12 +1,11 @@
 title: 使用JsonP进行跨域请求
 date: 2016-03-16 22:15:00
 tags:
-	- 跨域请求
-	- Javascript
 	- JsonP
+	- CORS
+	- 前端
 categories:
-	- 跨域请求
-
+	- 编程开发
 
 ---
 

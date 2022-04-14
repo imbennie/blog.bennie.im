@@ -2,9 +2,11 @@
 title: JS属性访问表达式之对象访问属性点方式与中括号方式的区别
 date: 2016-03-14 23:30:41
 tags:
-    - Javascript
+	- JavaScript
+	- 前端
+
 categories:
-    - 前端
+	- 编程开发
 
 ---
 

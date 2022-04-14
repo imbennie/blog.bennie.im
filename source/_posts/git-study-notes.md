@@ -2,9 +2,10 @@
 title: Git学习随笔 
 date: 2019-01-16 15:09:02
 tags:
-	- Git
+   - Git
+   - 学习笔记
 categories:
-	- Git
+	- 笔记本
 
 ---
 

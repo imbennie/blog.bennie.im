@@ -2,9 +2,10 @@
 title: JS拖拽图片简单例子
 date: 2017-01-01 04:50:00
 tags:
-	- Javascript
+    - JavaScript
+    - 前端
 categories:
-	- 前端
+	- 编程开发
 
 ---
 

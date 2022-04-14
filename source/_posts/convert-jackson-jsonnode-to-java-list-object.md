@@ -2,9 +2,11 @@
 title:  Jackson中转换JsonNode（ArrayNode）到Java中的List对象
 date: 2021-12-03 14:52:56
 tags:
+    - Jackson
     - Java
 categories:
-    - Java
+    - 编程开发
+
 ---
 
 Jackson用的不多，这里先记一下。

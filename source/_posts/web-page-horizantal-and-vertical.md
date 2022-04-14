@@ -1,12 +1,12 @@
 ---
 title: 网页文本完全水平+垂直居中
 date: 2017-08-01 23:20:57
+
 tags:
-    - CSS
-    - table-cell
-    - postition
-categories:
     - 前端
+    - CSS
+categories:
+    - 编程开发
 ---
 
 

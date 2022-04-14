@@ -2,12 +2,9 @@
 title: 遍历List集合时出现的3种异常
 date: 2017-04-10 21:29:48
 tags:
-    - 异常
-    - 迭代器
-    - 集合
     - Java
 categories:
-    - Java    
+    - 编程开发
 ---
 
 参考: 

@@ -2,16 +2,17 @@
 #!/bin/zsh
 
 
-dir=/c/Users/Bennie/iCloudDrive/Documents/Blog
+dir=~/blog
+backup_dir=$dir/bennie.im
+hexo_dir=$dir/hexo
 
-function goToWorkDir() {
-   cd $dir
+
+function goBackupDir() {
+	cd $backup_dir
 }
 
-
-function rmOld() {
-  cd $dir/bennie.im
-  rm -fr source themes
+function goHexoDir() {
+	cd $hexo_dir
 }
 
 
@@ -20,21 +21,19 @@ function cpData() {
 }
 
 function backUpData() {
-  cd $dir/hexo
-  cpData
+	goHexoDir
+	\cp -a source themes _config.yml _config.landscape.yml $backup_dir
 }
 
 
 function gitpush() {
    git add .
    git commit -m "backup update."
-   git push
+   git push origin HEAD:file_backup
 }
 
-goToWorkDir
-rmOld
 backUpData
-
+gitpush
 
 
 

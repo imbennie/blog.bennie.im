@@ -4,9 +4,8 @@ date: 2017-08-20 21:18:05
 tags:
 	- Hexo
 	- SSH
-	- SSHConfig
 categories:
-	- Hexo
+	- 笔记本
 
 ---
 

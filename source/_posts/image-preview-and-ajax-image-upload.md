@@ -2,11 +2,12 @@
 title: HTML图片预览及AJAX上传
 date: 2017-01-02 20:16:39
 tags:
-	- Javascript
+	- JavaScript
 	- Ajax
 	- HTML5
+    - 前端
 categories:
-	- 前端
+	- 编程开发
 ---
 
 

@@ -2,9 +2,11 @@
 title: JS获取项目路径
 date: 2016-12-25 19:06:27
 tags:
-	- Javascript
-categories:
+
+	- JavaScript
 	- 前端
+categories:
+	- 编程开发
 
 ---
 

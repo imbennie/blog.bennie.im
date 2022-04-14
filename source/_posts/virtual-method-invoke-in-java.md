@@ -2,11 +2,9 @@
 title: java多态中的虚方法调用
 date: 2017-02-19 00:17:27
 tags:
-    - 虚方法
-    - 多态
     - Java
 categories:
-    - Java
+    - 编程开发
 
     
 ---
