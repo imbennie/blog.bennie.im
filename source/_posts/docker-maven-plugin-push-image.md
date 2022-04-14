@@ -1,5 +1,5 @@
 ---
-title: docker-maven-plugin-push-image
+title: Spotify的docker-maven-plugin无法推送image到需认证的镜像注册中心
 date: 2022-02-26 18:17:04
 tags:
 	- Docker
