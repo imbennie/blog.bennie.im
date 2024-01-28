@@ -300,7 +300,7 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: true
-  url: https://github.com/imbennie/blog/tree/main/source/
+  # url: https://github.com/imbennie/blog/tree/main/source/
   url: https://github.com/imbennie/blog/edit/main/source/
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
