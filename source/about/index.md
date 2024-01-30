@@ -1,5 +1,6 @@
 ---
 type: "about"
+title: About me
 comments: true
 ---
 

@@ -101,6 +101,7 @@ menu:
   Categories: /categories/ || fa fa-list
   Tags: /tags/ || fa fa-tags
   Archives: /archives/ || fa fa-archive
+  About: /about/ || fa fa-archive
   # Links: /links/ || fa fa-link
 
   # 关于: /about/ || fa fa-user
