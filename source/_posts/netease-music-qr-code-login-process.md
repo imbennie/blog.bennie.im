@@ -229,4 +229,5 @@ X-Firefox-Spdy: h2
 ```
 
 
-BTW: 自己写的一个小程序（Just for fun）：https://github.com/imbennie/netease-music-tools
+~~BTW: 自己写的一个小程序（Just for fun）：https://github.com/imbennie/netease-music-tools~~
+目前闭源。
