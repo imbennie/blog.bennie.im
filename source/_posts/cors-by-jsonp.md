@@ -2,10 +2,10 @@
 title: 使用JsonP进行跨域请求
 date: 2016-03-16 22:15:00
 tags:
-	- Frontend
-	- CORS
+- Frontend
+- CORS
 categories:
-	- Programming
+- Programming
 
 ---
 
@@ -37,19 +37,22 @@ a.baidu.com:8080访问a.baidu.com:80 是跨域
 http://a.baidu.com访问https://a.baidu.com 是跨域
 
 还有一点比较重要，限制跨域是浏览器的行为，而不是JS的行为。
+
 ## 为什么浏览器要限制跨域访问呢？
 参见：http://blog.csdn.net/notechsolution/article/details/50394391#t1
+
 ## 为什么要跨域以及跨域的作用是什么？
 参见：http://blog.csdn.net/notechsolution/article/details/50394391#t2
 
 
 通过上面的知识我们知道了跨域的问题根本以及跨域的作用以及何时需要跨域！
 下面就是真正面对面接触了。
+
 ## Jsonp跨域的原理是什么以及如何进行跨域？
 这里本人粗浅的说一下本人的理解, 具体的大家可以去[Jsonp-维基百科](https://zh.wikipedia.org/wiki/JSONP)这里了解.
 以前我在听别人说跨域请求的时候, 大概只是在脑海里知道a站访问b站有时候会出现安全问题, 而无法获取到数据什么的.
 随后在引用其他其他js文件的时候发现, 为什么这样子就可以拿到其他网站的资源?
-```
+```html
 <script type="text/Javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 ```
 那时候就隐约觉得这个事有点蹊跷, 不过那时候还不知道是跟跨域有关系.
@@ -61,12 +64,12 @@ http://a.baidu.com访问https://a.baidu.com 是跨域
 
 例如假设在一个服务器上的 http://xxx.com/test.js 内容是:
 
-```
+```javascript
 alert("Test JS Execute!");
 ```
 
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,71 +87,70 @@ alert("Test JS Execute!");
 
 这里先建立一个1.html文件写上这段代码, 定义一个testFunction这个函数.
 
-```
+```javascript
 <script type="text/Javascript">
-	var testFunction = function (data) {
-		console.log(data);
-    };
+var testFunction = function (data) {
+  console.log(data);
+};
 </script>		
 ```
 
 定义这个函数之后, 我可以通过 `testFunction(data);` 来调用执行它的是吧? 
 那么OK, 我让远程是文件返回一个这样的函数调用代码过来, 然后让他加载到script标签里面这样不就可以调用这个函数了么? 而这个函数中的data就是我们希望跨域传过来的json数据. 所以我在服务端把这个json数据准备好, 然后拼接成调用js方法的代码返回给页面不就可以了么?
 
-例如我向页面输出这样的内容:
+例如在servlet中向页面输出这样的内容:
 
-```
-String json = "{\"result\":\"测试JSONP"}";
-// 输出到页面为: {"result":"测试JSONP"}
+```java
+String json = "{\"result\": \"测试JSONP"}";
+// 输出到页面为: {"result": "测试JSONP"}
 
 response.getWriter().writer("testFunction(" + json + ");");
-// 输出到页面为: testFunction({"result":"测试JSONP"});
+// 输出到页面为: testFunction({"result": "测试JSONP"});
 
 ```
 
 这样子之后, 我再把1.html改成这样子
 
-```
+```html
 <script type="text/Javascript">
+// 定义一个函数
+var testFunction = function (data){
+	console.log(data);
+};
 
-	// 定义一个函数
-	var testFunction = function (data){
-		console.log(data);
-    };
-    
-    // 生成script标签来调用上面的函数.
-    var url ="http://xxx.com/TestFunctionServlet";
-	var script = document.createElement('script');
-	script.setAttribute('src',  url);
+// 生成script标签来调用上面的函数.
+var url = "http://xxx.com/TestFunctionServlet";
+var script = document.createElement('script');
+script.setAttribute('src',  url);
 
-	// 把script标签加入head标签.这个时候就可以调用我们上面定义的testFunction函数了.
-	document.getElementsByTagName('head')[0].appendChild(script);
-</script>		
+// 把script标签加入head标签.这个时候就可以调用我们上面定义的testFunction函数了.
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 ```
 
 上面的代码会生成一个script标签.
 
 ```
-<script type="text/Javascript" src="http://xxx.com/TestFunctionServlet"></script>
+<script type="text/javascript" src="http://xxx.com/TestFunctionServlet"></script>
 ```
 
-这个script标签执行之后, 就会调用我们定义的函数. 这就是跨域请求的原理和基本实现.
+这个script标签执行之后便会调用我们定义的函数. 这就是跨域请求的原理和基本实现.
 
 -------
 
-JQuery给我们提供了`$.ajxx();`这个方法, 但是他和jsonp是2个东西, 但是原理也是和这个一样的.只是他在内部做了封装处理, 还为了提供了很多方便的地方.
+JQuery给我们提供了`$.ajxx();`这个方法, 他和jsonp是2个东西, 但是原理也是和这个一样的. 只是他在内部做了封装处理, 还为了提供了很多方便的地方.
 具体参考: http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html 这个文章, 在文章结尾上方说明了JQuery的代码实现.
 
 
 另外还有一点就是, 大家可能会问, 服务器端那里给我写数据的时候他怎么就知道我页面定义的函数名字是什么?
 这个就需要用到查到字符串, 我们可以在url后面加上callback这个查询字符串然后写上你的本地函数名, 传递到服务器服务器解析出来, 写出的时候再传递给页面, 这样就是动态的过程了.
 
-大家如果观察过别人网站的url地址时是可以发现callback这个东西的.
+大家如果观察过别人网站的url地址时是可以发现callback这个参数的.
 例如网易云这个URL我加上callback, 随便给一个函数名字.
 大家可以访问 http://s.music.163.com/search/get/?type=1&filterDj=true&s=%C2%A0%E7%88%B1%E5%B0%B1%E7%88%B1%E4%BA%86&limit=3&offset=0&callback=testJsonp
 他在下发数据的时候就会加上这个函数名. 点开这个网页看看就可以看到`testJsonp(jsonObj)`的括号里面套了一个json对象.
 如果看到的json是乱七八糟的网页源文件, 那么谷歌浏览器可以安装一个jsonview插件, 这样就显示了格式化之后的json.
 
 本文针对jsonp方式的跨域请求进行简单的说明, 大家也可以去研究下JQuery提供的解决方案，理解了这个，那个就很容易了。
-最后，跨域通信手段大概有：jsonp，document.domain，window.name，hash传值，possMessage，Access-Control-Allow-Origin看起来方法挺多，但是应用场景都有一定要求，按需使用吧。
+最后，跨域通信手段大概有：jsonp，document.domain，window.name，hash传值，possMessage，Access-Control-Allow-Origin 看起来方法挺多，但是应用场景都有一定要求，按需使用吧。
 
