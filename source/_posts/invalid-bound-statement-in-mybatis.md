@@ -2,19 +2,17 @@
 title: 记一下 Invalid bound statement (not found) 的问题
 date: 2018-06-02 18:15:47
 tags: 
-	- Java
-	- MyBatis
+- Java
+- MyBatis
 
 categories: 
-	- Programming
-
+- Programming
 
 ---
 
 记一下在开发时出现的一个问题, 弄了很久才得到解决.
 网上查询到的回答大概都是如这篇文章回答的一样来解决 https://www.jianshu.com/p/800fe918cc7a
 但进行操作后依旧未能解决我的问题.
-
 
 
 <!-- more -->
