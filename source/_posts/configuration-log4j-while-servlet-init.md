@@ -4,7 +4,7 @@ tags:
 	- Java
 	- Servlet&Jsp
 categories:
-	- Notes
+	- IT Notes
 
 
 ---

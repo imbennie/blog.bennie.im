@@ -4,7 +4,7 @@ date: 2019-10-31 15:43:56
 tags:
     - Shell
 categories:
-    - Notes 
+    - IT Notes 
 
 
 ---

@@ -4,7 +4,7 @@ date: 2017-06-14 01:30:16
 tags:
     - SSH
 categories:
-    - Notes
+    - IT Notes
 
 ---
 

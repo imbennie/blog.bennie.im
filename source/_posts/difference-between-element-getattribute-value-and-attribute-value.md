@@ -5,7 +5,7 @@ tags:
   - Frontend
   - HTML
 categories:
-	- Programming
+	- IT Notes
 
 ---
 

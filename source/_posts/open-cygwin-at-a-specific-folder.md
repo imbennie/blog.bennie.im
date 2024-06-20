@@ -3,9 +3,10 @@ title:  Windows上Cygwin安装文件夹右键菜单实现任意目录打开
 date: 2021-11-25 10:12:56
 tags:
 	- Windows
-	- Cygwin 
+	- Cygwin
+	- Tools
 categories:
-    - Tools 
+    - IT Notes 
 ---
 实现效果：任意菜单右键后，弹出菜单项，点击后shell自动进入当前目录路径。
 

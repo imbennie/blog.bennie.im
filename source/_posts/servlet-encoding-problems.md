@@ -4,7 +4,7 @@ tags:
 	- Servlet
 	- Java
 categories:
-	- Programming
+	- IT Notes
 
 ---
 

@@ -6,7 +6,7 @@ tags:
     - JavaScript
 
 categories:
-	- Programming
+	- IT Notes
 
 ---
 

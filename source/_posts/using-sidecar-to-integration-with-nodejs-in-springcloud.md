@@ -5,8 +5,9 @@ tags:
 	- Java
 	- Spring Cloud
 	- Microservice
+	- Design and Architecture
 categories:
-	- Notes
+	- IT Notes
 ---
 
 网上看到的一篇文章，觉得写得挺好，现转载于此，以方便需要的网友查阅。

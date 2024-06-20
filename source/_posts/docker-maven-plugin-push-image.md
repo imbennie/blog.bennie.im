@@ -5,7 +5,7 @@ tags:
 	- Docker
 	- Maven
 categories:
-	- Notes 
+	- IT Notes 
 
 ---
 

@@ -5,7 +5,7 @@ tags:
 	- Hexo
 	- SSH
 categories:
-	- Notes
+	- IT Notes
 
 ---
 

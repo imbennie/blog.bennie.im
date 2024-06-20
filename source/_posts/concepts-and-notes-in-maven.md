@@ -5,8 +5,7 @@ tags:
     - Java
     - Maven
 categories:
-    - Notes
-    - Study Notes
+    - IT Notes
 
 ---
 

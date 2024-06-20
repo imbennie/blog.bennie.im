@@ -5,7 +5,7 @@ tags:
     - Frontend
     - JavaScript
 categories:
-	- Programming
+	- IT Notes
 
 ---
 

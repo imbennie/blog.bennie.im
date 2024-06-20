@@ -6,7 +6,7 @@ tags:
 - MyBatis
 
 categories: 
-- Programming
+- IT Notes
 
 ---
 

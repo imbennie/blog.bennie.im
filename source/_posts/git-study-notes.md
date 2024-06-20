@@ -4,8 +4,7 @@ date: 2019-01-16 15:09:02
 tags:
    - Git
 categories:
-	- Notes
-	- Study Notes
+	- IT Notes
 
 ---
 

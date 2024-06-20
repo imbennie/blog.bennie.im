@@ -3,7 +3,7 @@ date: 2016-01-07 00:19:23
 tags:
 	- Linux
 categories:
-	- Notes 
+	- IT Notes 
 ---
 
 ### 创建指定文件快捷方式

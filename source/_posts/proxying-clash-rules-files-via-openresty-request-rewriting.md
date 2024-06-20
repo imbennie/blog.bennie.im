@@ -3,9 +3,10 @@ title: 使用Openresty请求重写来代理Clash rules文件
 date: 2024-03-25 14:06:02
 tags:
    - Openresty
-   - Clash 
+   - Clash
+   - Scripts
 categories:
-	- Scripts
+	- IT Notes
 
 ---
 

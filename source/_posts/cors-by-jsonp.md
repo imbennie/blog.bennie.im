@@ -5,7 +5,7 @@ tags:
 - Frontend
 - CORS
 categories:
-- Programming
+- IT Notes
 
 ---
 

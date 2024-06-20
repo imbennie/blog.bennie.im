@@ -5,7 +5,7 @@ tags:
     - Java
     - Jackson
 categories:
-    - Programming
+    - IT Notes
 
 ---
 

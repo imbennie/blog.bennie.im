@@ -3,8 +3,9 @@ date: 2015-09-20 20:11:57
 
 tags:
 	- Design Patterns
-categories:
 	- Design and Architecture
+categories:
+	- IT Notes
 
 ---
 

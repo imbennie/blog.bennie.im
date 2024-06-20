@@ -2,9 +2,10 @@
 title:  Java京训钉挂机提交学习时长脚本
 date: 2021-11-24 14:47:56
 tags:
-    - Java 
-categories:
+    - Java
     - Scripts
+categories:
+    - IT Notes
 ---
 
 原理：模拟浏览器发起http请求。

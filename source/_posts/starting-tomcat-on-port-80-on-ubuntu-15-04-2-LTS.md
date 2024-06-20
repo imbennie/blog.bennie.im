@@ -4,7 +4,7 @@ tags:
 	- Tomcat
 	- Ubuntu
 categories:
-	- Notes 
+	- IT Notes 
 
 ---
 

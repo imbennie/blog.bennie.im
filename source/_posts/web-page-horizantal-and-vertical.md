@@ -6,7 +6,7 @@ tags:
     - Frontend
     - CSS
 categories:
-    - Programming
+    - IT Notes
 ---
 
 

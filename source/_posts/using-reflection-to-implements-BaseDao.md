@@ -4,7 +4,7 @@ date: 2016-12-01 00:47:17
 tags:
     - Java
 categories: 
-    - Programming
+    - IT Notes
 ---
 
 在web开发中, 我们需要用dao从数据库中查询数据, 此时我们可以定义一个BaseDao, 就是用于做一些增删改查的基础DAO, 其后的其他的具体DAO, 只需要继承这个DAO, 然后再根据具体的业务逻辑去写具体方法就行, 实现代码重用.
