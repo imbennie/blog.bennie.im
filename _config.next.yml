@@ -69,9 +69,9 @@ creative_commons:
   size: small
   sidebar: false
   post: true
-  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh-hans
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
-  language: deed.zh 
+  language: deed.zh-hans
 
 # Open graph settings
 # See: https://hexo.io/docs/helpers#open-graph
@@ -98,8 +98,8 @@ open_graph:
 # External url should start with http:// or https://
 menu:
   Home: / || fa fa-home
-  Categories: /categories/ || fa fa-list
   Tags: /tags/ || fa fa-tags
+  Categories: /categories/ || fa fa-list
   Archives: /archives/ || fa fa-archive
   About: /about/ || fa fa-archive
   # Links: /links/ || fa fa-link
