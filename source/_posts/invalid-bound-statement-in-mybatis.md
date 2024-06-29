@@ -42,6 +42,7 @@ categories:
 
 
 本来想仔细探究一下这其中的究竟, 但因工作繁忙无暇深入去探索, 暂且记录一下留作以后参考. 
+
 上网看了一下别人的博客, 介绍的classpath和classpath*的大概区别如下: 
-https://blog.csdn.net/kkdelta/article/details/5507799
-http://kyfxbl.iteye.com/blog/1675362
+- https://blog.csdn.net/kkdelta/article/details/5507799
+- http://kyfxbl.iteye.com/blog/1675362

@@ -6,7 +6,7 @@ tags:
 	- Cygwin
 	- Tools
 categories:
-    - IT Notes 
+    - IT Notes
 ---
 实现效果：任意菜单右键后，弹出菜单项，点击后shell自动进入当前目录路径。
 

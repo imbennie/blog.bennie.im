@@ -1,3 +1,4 @@
+---
 title: Mybatis插入记录后获取主键id
 date: 2015-12-23 05:10:56
 tags:
@@ -6,7 +7,6 @@ tags:
 
 categories:
 	- IT Notes
-
 
 ---
 

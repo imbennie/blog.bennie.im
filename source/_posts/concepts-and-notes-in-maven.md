@@ -78,7 +78,7 @@ categories:
 
 例如packing类型为jar的和为war的package阶段绑定的插件就不一样。
 
-```Xml
+```xml
 <!-- packing为jar -->
 <package>
     org.apache.maven.plugins:maven-jar-plugin:2.4:jar

@@ -29,17 +29,12 @@ https://stackoverflow.com/questions/48287292/how-do-you-convert-a-jackson-jsonno
 
 使用readerFor或readerForListOf
 
-```
-
+```java
 ObjectMapper mapper = new ObjectMapper();
 JsonNode rootNode = mapper.readTree(json);
 JsonNode internalNode = rootNode.path("objectsiwant");
 
-// ----------------
-
 List<MyPojo> myPojoList = mapper.readerFor(new TypeReference<List<MyPojo>>(){}).readValue(internalNode);
-
-// 或者
-
+// or
 List<MyPojo> myPojoList = mapper.readerForListOf(MyPojo.class).readValue(internalNode);
 ```
