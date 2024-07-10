@@ -2,8 +2,7 @@
 title: Mapstruct与lombok的冲突问题 
 date: 2024-06-29 18:52:40
 tags:
-	- Frontend
-	- JavaScript
+	- Java
 categories:
 	- IT Notes
 
