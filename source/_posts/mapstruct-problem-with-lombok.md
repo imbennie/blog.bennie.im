@@ -8,7 +8,7 @@ categories:
 
 ---
 
-记一下在mapstruct结合lombok使用的冲突问题：
+记一下在[MapStruct](https://mapstruct.org/)结合lombok使用的冲突问题：
 - 编译时提示`@Mapping`配置的属性找不到。
 - 在生成Mapper的impl实现类时不能生成正确的bean的getter/setter语句。
 
